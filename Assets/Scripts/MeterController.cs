@@ -23,6 +23,7 @@ public class MeterController : MonoBehaviour
     void Update()
     {
         AnimationController();
+        transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
     }
 
     public float GetCurrentAmount()
@@ -63,7 +64,6 @@ public class MeterController : MonoBehaviour
 
     private void AnimationController()
     {
-        print(currentAmount / Total);
         myAnimator.SetFloat("Percentage", currentAmount/Total);
     }
 

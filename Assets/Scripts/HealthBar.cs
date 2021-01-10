@@ -23,6 +23,8 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         //AnimationController();
+        transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+
     }
 
     void RenderCheck()

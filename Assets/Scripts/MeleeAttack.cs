@@ -31,7 +31,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (attackTimer >= attackTime)
         {
-            Debug.Log("Attacking");
+            //Debug.Log("Attacking");
             myCollider.enabled = true;
             attackTimer = 0f;
         }   

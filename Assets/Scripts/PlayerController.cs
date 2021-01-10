@@ -5,10 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
-    // config
-    [Header("Config")]
-    [SerializeField] float runSpeed = 3.0f;
-    [SerializeField] float jumpSpeed = 5.0f;
+
 
     [SerializeField] float leekDurability = 20f;
     [SerializeField] float carrotAmmo = 20f;
@@ -42,11 +39,11 @@ public class PlayerController : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCollider = GetComponent<Collider2D>();
-        healthBar = GetComponentInChildren<HealthBar>();
+        healthBar = transform.parent.GetComponentInChildren<HealthBar>();
         leekAttack = GetComponentInChildren<MeleeAttack>();
-        orangeMeter = transform.Find("OrangeMeter").GetComponent<MeterController>();
+        orangeMeter = transform.parent.transform.Find("OrangeMeter").GetComponent<MeterController>();
         UpdateOrangeMeter(this.carrotAmmo);
-        greenMeter = transform.Find("GreenMeter").GetComponent<MeterController>();
+        greenMeter = transform.parent.transform.Find("GreenMeter").GetComponent<MeterController>();
         UpdateGreenMeter(this.leekDurability);
         damageTimer = 99f;
         overHarvestableCrop = false;
@@ -66,10 +63,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Run();
         FlipSprite();
         WalkAnimation();
-        Jump();
+
         Attack();
         if (overHarvestableCrop) GrabCrops();
 
@@ -105,26 +101,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Run()
-    {
-        float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myBody.velocity.y);
-        myBody.velocity = playerVelocity;
-    }
 
-    private void Jump()
-    {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("foreground")))
-        {
-            if (CrossPlatformInputManager.GetButtonDown("Jump"))
-            {
-                Vector2 jumpVelocity = new Vector2(0f, jumpSpeed);
-                myBody.velocity += jumpVelocity;
-
-            }
-        }
-
-    }
 
     private void FlipSprite()
     {
@@ -177,7 +154,7 @@ public class PlayerController : MonoBehaviour
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("crops")))
         {
-            transform.GetComponentInChildren<EBlink>().EnableEblink();
+            transform.parent.GetComponentInChildren<EBlink>().EnableEblink();
             overHarvestableCrop = true;
         }
     }
@@ -218,7 +195,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        transform.GetComponentInChildren<EBlink>().DisableEblink();
+        transform.parent.transform.GetComponentInChildren<EBlink>().DisableEblink();
 
     }
 

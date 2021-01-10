@@ -30,6 +30,11 @@ public class EBlink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        //if (transform.parent.transform.localScale.x < 0)
+        //{
+        //    transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        //} 
+
     }
 }

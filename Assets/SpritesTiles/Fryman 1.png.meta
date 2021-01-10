@@ -1,0 +1,1076 @@
+fileFormatVersion: 2
+guid: 8f4eec376353a48acb8de9568be0b827
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1701553123667636092
+    second: Fryman 1_0
+  - first:
+      213: -3324398306152689279
+    second: Fryman 1_1
+  - first:
+      213: -2624169517592563782
+    second: Fryman 1_2
+  - first:
+      213: -6934335350845398985
+    second: Fryman 1_3
+  - first:
+      213: -2128598122367546746
+    second: Fryman 1_4
+  - first:
+      213: -2650042188472894826
+    second: Fryman 1_5
+  - first:
+      213: 2274921096866597421
+    second: Fryman 1_6
+  - first:
+      213: -817198338760463557
+    second: Fryman 1_7
+  - first:
+      213: -8343113084691513588
+    second: Fryman 1_8
+  - first:
+      213: -7261645794576212938
+    second: Fryman 1_9
+  - first:
+      213: -2472613367925401275
+    second: Fryman 1_10
+  - first:
+      213: 3227419170996632538
+    second: Fryman 1_11
+  - first:
+      213: -4025854477909644394
+    second: Fryman 1_12
+  - first:
+      213: -7330211289063467091
+    second: Fryman 1_13
+  - first:
+      213: -413286596495596281
+    second: Fryman 1_14
+  - first:
+      213: -1779686497168801900
+    second: Fryman 1_15
+  - first:
+      213: -2187843264442442048
+    second: Fryman 1_16
+  - first:
+      213: 2591580499488020966
+    second: Fryman 1_17
+  - first:
+      213: -1633950036351878846
+    second: Fryman 1_18
+  - first:
+      213: 6837194016698349009
+    second: Fryman 1_19
+  - first:
+      213: 3943733168027571072
+    second: Fryman 1_20
+  - first:
+      213: -8730811883465287600
+    second: Fryman 1_21
+  - first:
+      213: -9021636839709053028
+    second: Fryman 1_22
+  - first:
+      213: 1195103769794439679
+    second: Fryman 1_23
+  - first:
+      213: 6722465237937565074
+    second: Fryman 1_24
+  - first:
+      213: -2106743804040364727
+    second: Fryman 1_25
+  - first:
+      213: 146399335002010976
+    second: Fryman 1_26
+  - first:
+      213: 7926945699976812619
+    second: Fryman 1_27
+  - first:
+      213: -3487305850878804270
+    second: Fryman 1_28
+  - first:
+      213: 7292203954187496244
+    second: Fryman 1_29
+  - first:
+      213: 497484301847313555
+    second: Fryman 1_30
+  - first:
+      213: -7499840379806994929
+    second: Fryman 1_31
+  - first:
+      213: 3122893819678013242
+    second: Fryman 1_32
+  - first:
+      213: -3638524985561274175
+    second: Fryman 1_33
+  - first:
+      213: 4139378760597536483
+    second: Fryman 1_34
+  - first:
+      213: 5359756769312501001
+    second: Fryman 1_35
+  - first:
+      213: 3746778318508667100
+    second: Fryman 1_36
+  - first:
+      213: -202799351149404409
+    second: Fryman 1_37
+  - first:
+      213: 5603388445381819160
+    second: Fryman 1_38
+  - first:
+      213: 8934579173201974083
+    second: Fryman 1_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fryman 1_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 393
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4809551037ed268e0800000000000000
+      internalID: -1701553123667636092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 384
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181dbdd9a5d5dd1d0800000000000000
+      internalID: -3324398306152689279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 384
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfac792ab3159bd0800000000000000
+      internalID: -2624169517592563782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 384
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7302d63fcba44cf90800000000000000
+      internalID: -6934335350845398985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 384
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a08b61943b572e0800000000000000
+      internalID: -2128598122367546746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 384
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a364c8ba8293bd0800000000000000
+      internalID: -2650042188472894826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_6
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 320
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a86ce3fa4229f10800000000000000
+      internalID: 2274921096866597421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 320
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ba42bc07ab8a4f0800000000000000
+      internalID: -817198338760463557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 320
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f7c0a6ade473c80800000000000000
+      internalID: -8343113084691513588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 320
+        width: 26
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c5399af93793b90800000000000000
+      internalID: -7261645794576212938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_10
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 320
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5499ce90e338fadd0800000000000000
+      internalID: -2472613367925401275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_11
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 320
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb3a8ce2a81acc20800000000000000
+      internalID: 3227419170996632538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_12
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 256
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ba7c6aeaa4128c0800000000000000
+      internalID: -4025854477909644394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 256
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da750d27babd54a90800000000000000
+      internalID: -7330211289063467091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_14
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 256
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7052379b706b34af0800000000000000
+      internalID: -413286596495596281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_15
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 256
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fb1bc5f884d47e0800000000000000
+      internalID: -1779686497168801900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_16
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 256
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce5da6842833a1e0800000000000000
+      internalID: -2187843264442442048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_17
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 256
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e910d6cbb427f320800000000000000
+      internalID: 2591580499488020966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 192
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2497286591b0359e0800000000000000
+      internalID: -1633950036351878846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 192
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d53bb1bbb792ee50800000000000000
+      internalID: 6837194016698349009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_20
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 192
+        width: 28
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0839539eb64fab630800000000000000
+      internalID: 3943733168027571072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_21
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 192
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058da4d89dce5d680800000000000000
+      internalID: -8730811883465287600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_22
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 192
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f609cc715bcc280800000000000000
+      internalID: -9021636839709053028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 192
+        width: 33
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9e354fb8cd59010800000000000000
+      internalID: 1195103769794439679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 128
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d2e2a448efa4d50800000000000000
+      internalID: 6722465237937565074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 128
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d3b671ca753c2e0800000000000000
+      internalID: -2106743804040364727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_26
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 128
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065f5266b6d180200800000000000000
+      internalID: 146399335002010976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_27
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 128
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b489de88d1b220e60800000000000000
+      internalID: 7926945699976812619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_28
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 128
+        width: 43
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de3a3f1ec99a9fc0800000000000000
+      internalID: -3487305850878804270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_29
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 128
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b6b0f4cdc133560800000000000000
+      internalID: 7292203954187496244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_30
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 64
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c31f4365b67e600800000000000000
+      internalID: 497484301847313555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_31
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 64
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e297119e63be790800000000000000
+      internalID: -7499840379806994929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_32
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 64
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37bb29126fb65b20800000000000000
+      internalID: 3122893819678013242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_33
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 64
+        width: 29
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8ac39adcc518dc0800000000000000
+      internalID: -3638524985561274175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_34
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 64
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee76382d07027930800000000000000
+      internalID: 4139378760597536483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_35
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 64
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ded5d626ea16a40800000000000000
+      internalID: 5359756769312501001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_36
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd038d6870b3ff330800000000000000
+      internalID: 3746778318508667100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_37
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f5f0a80138f2df0800000000000000
+      internalID: -202799351149404409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bf2816a1c33cd40800000000000000
+      internalID: 5603388445381819160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fryman 1_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3439e4cab600efb70800000000000000
+      internalID: 8934579173201974083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
