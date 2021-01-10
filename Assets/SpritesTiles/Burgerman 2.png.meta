@@ -1,0 +1,1076 @@
+fileFormatVersion: 2
+guid: 31f9af289f6094e5abcd63a61d2d46e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7713596963242294592
+    second: Burgerman 2_0
+  - first:
+      213: -2054133800646541937
+    second: Burgerman 2_1
+  - first:
+      213: -2782849830363584942
+    second: Burgerman 2_2
+  - first:
+      213: -32998160180786650
+    second: Burgerman 2_3
+  - first:
+      213: -832654926655627688
+    second: Burgerman 2_4
+  - first:
+      213: 7398716227060382101
+    second: Burgerman 2_5
+  - first:
+      213: 8019810987755120657
+    second: Burgerman 2_6
+  - first:
+      213: 411973600619167644
+    second: Burgerman 2_7
+  - first:
+      213: -3738683516251828423
+    second: Burgerman 2_8
+  - first:
+      213: -9210804022556325393
+    second: Burgerman 2_9
+  - first:
+      213: -9142638026915247432
+    second: Burgerman 2_10
+  - first:
+      213: -44550079647289612
+    second: Burgerman 2_11
+  - first:
+      213: 6567032693459412070
+    second: Burgerman 2_12
+  - first:
+      213: 1817594840754058089
+    second: Burgerman 2_13
+  - first:
+      213: -2085942165260323476
+    second: Burgerman 2_14
+  - first:
+      213: 6400349234595395008
+    second: Burgerman 2_15
+  - first:
+      213: -5170983550248614580
+    second: Burgerman 2_16
+  - first:
+      213: -8152386063923679039
+    second: Burgerman 2_17
+  - first:
+      213: 6488067340357418265
+    second: Burgerman 2_18
+  - first:
+      213: -2949047791414307276
+    second: Burgerman 2_19
+  - first:
+      213: -7186108997175318780
+    second: Burgerman 2_20
+  - first:
+      213: -8347737966599486499
+    second: Burgerman 2_21
+  - first:
+      213: 8352347446211965689
+    second: Burgerman 2_22
+  - first:
+      213: 6567936545125594028
+    second: Burgerman 2_23
+  - first:
+      213: -2029048010744184161
+    second: Burgerman 2_24
+  - first:
+      213: -9182338841662708577
+    second: Burgerman 2_25
+  - first:
+      213: 737664631993076500
+    second: Burgerman 2_26
+  - first:
+      213: 6108226917682629112
+    second: Burgerman 2_27
+  - first:
+      213: 4785927520378553701
+    second: Burgerman 2_28
+  - first:
+      213: -6738091809336425723
+    second: Burgerman 2_29
+  - first:
+      213: 6313967662291513474
+    second: Burgerman 2_30
+  - first:
+      213: -7456861460810237052
+    second: Burgerman 2_31
+  - first:
+      213: 8127750216246280623
+    second: Burgerman 2_32
+  - first:
+      213: 127621908867778859
+    second: Burgerman 2_33
+  - first:
+      213: 8564651101464296946
+    second: Burgerman 2_34
+  - first:
+      213: 8074710979119918544
+    second: Burgerman 2_35
+  - first:
+      213: -6899891030588451207
+    second: Burgerman 2_36
+  - first:
+      213: -1035465141558250405
+    second: Burgerman 2_37
+  - first:
+      213: 2977711263736725579
+    second: Burgerman 2_38
+  - first:
+      213: 8497882370166912736
+    second: Burgerman 2_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Burgerman 2_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 394
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c249692e6cc3f490800000000000000
+      internalID: -7713596963242294592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 384
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8df65b01304e73e0800000000000000
+      internalID: -2054133800646541937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 384
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2562cedc2d45169d0800000000000000
+      internalID: -2782849830363584942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 384
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ace202954ca8ff0800000000000000
+      internalID: -32998160180786650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 384
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e563c71c0d174f0800000000000000
+      internalID: -832654926655627688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 384
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5993adb55358da660800000000000000
+      internalID: 7398716227060382101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 320
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1182be24a971c4f60800000000000000
+      internalID: 8019810987755120657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_7
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 320
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f7eb99ecf97b500800000000000000
+      internalID: 411973600619167644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_8
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 320
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f833e76278d1cc0800000000000000
+      internalID: -3738683516251828423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_9
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 320
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe98acbda86ac2080800000000000000
+      internalID: -9210804022556325393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_10
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 320
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba0dbf7723de1180800000000000000
+      internalID: -9142638026915247432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_11
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 320
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe68e740f9b16ff0800000000000000
+      internalID: -44550079647289612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 256
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664660ae079c22b50800000000000000
+      internalID: 6567032693459412070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_13
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 256
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9637abca0e4693910800000000000000
+      internalID: 1817594840754058089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_14
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 256
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6536a907ae3d03e0800000000000000
+      internalID: -2085942165260323476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_15
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 256
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c57086e7bb92d850800000000000000
+      internalID: 6400349234595395008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 256
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c450b0cabd9fc38b0800000000000000
+      internalID: -5170983550248614580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_17
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 256
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0fbfb6118ecde80800000000000000
+      internalID: -8152386063923679039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 192
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d31dceede3a0a50800000000000000
+      internalID: 6488067340357418265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_19
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 192
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436991f88a0e217d0800000000000000
+      internalID: -2949047791414307276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_20
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 192
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4076022d0ffc54c90800000000000000
+      internalID: -7186108997175318780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_21
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 192
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3cbce2c80e62c80800000000000000
+      internalID: -8347737966599486499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_22
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 192
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2fa1cefbf79e370800000000000000
+      internalID: 8352347446211965689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_23
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 192
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca374874d7ff52b50800000000000000
+      internalID: 6567936545125594028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_24
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 128
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f924167a59f57d3e0800000000000000
+      internalID: -2029048010744184161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 128
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f942c6f3977c19080800000000000000
+      internalID: -9182338841662708577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_26
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 128
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b01511316bc3a00800000000000000
+      internalID: 737664631993076500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_27
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 128
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9c3f3d408c4c450800000000000000
+      internalID: 6108226917682629112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_28
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 128
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5650eec09b70b6240800000000000000
+      internalID: 4785927520378553701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_29
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 128
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5038888033d7d72a0800000000000000
+      internalID: -6738091809336425723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 64
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2807032d228bf9750800000000000000
+      internalID: 6313967662291513474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_31
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bfa117208e38890800000000000000
+      internalID: -7456861460810237052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_32
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1c67e42c19bc070800000000000000
+      internalID: 8127750216246280623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_33
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 64
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b290f9f237765c100800000000000000
+      internalID: 127621908867778859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_34
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 64
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdffef9cc0cbd670800000000000000
+      internalID: 8564651101464296946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_35
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 64
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dda3669ad22f0070800000000000000
+      internalID: 8074710979119918544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_36
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9761fd43aa9ae30a0800000000000000
+      internalID: -6899891030588451207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_37
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54fe1c90f941a1f0800000000000000
+      internalID: -1035465141558250405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_38
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4005b62e94f25920800000000000000
+      internalID: 2977711263736725579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burgerman 2_39
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 43
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e67ad0fdfa8ee570800000000000000
+      internalID: 8497882370166912736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

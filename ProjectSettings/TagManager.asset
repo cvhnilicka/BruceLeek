@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fire
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - player
+  - enemy
+  - foreground
+  - background
+  - weapon
+  - crops
+  - friendlyBullet
+  - enemyBullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 3724698027
+    locked: 0
+  - name: enemy
+    uniqueID: 165714003
+    locked: 0
+  - name: player
+    uniqueID: 1839376183
+    locked: 0
+  - name: foreground
+    uniqueID: 2902284937
+    locked: 0
+  - name: crops
+    uniqueID: 2299825833
+    locked: 0
