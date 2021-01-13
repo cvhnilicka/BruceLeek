@@ -20,8 +20,10 @@ public class ImageDigitAnimator : MonoBehaviour
     {
         int n = digit - 1;
         if (n < 0) n = digitImages.Length - 1;
-        //print("DIGIT:  " + digit);
-        image.sprite = digitImages[n];
+        // sometimes image.sprite is null
+        // will need to look into later
+        if (image.sprite) image.sprite = digitImages[n];
+
     }
 
     // Update is called once per frame

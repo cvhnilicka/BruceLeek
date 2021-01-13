@@ -1,27 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class GameSession : MonoBehaviour
 {
 
     [SerializeField] int MaxEnemies = 3;
     [SerializeField] float enemySpawnTime = 3f;
-
-    public GameObject BurgerMan;
-    public GameObject SpawnPoint;
+    [SerializeField] GameObject[] enemies;
 
     GameObject[] spawnPoints;
     ImageDigitAnimator[] timerImages;
 
+ 
 
-    float enemySpawnTimer;
-    int numEnemies;
+    Wave currentWave;
+
+    [SerializeField] GameObject waveBackground;
+
+
 
     float breakTimer;
-    float breakTime = 30f;
+    float breakTime = 5f;
 
     float gameTimer = 120f;
+
+    int waveNum;
 
 
     private void Awake()
@@ -40,13 +45,14 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemySpawnTimer = 0f;
-        numEnemies = 1;
+        waveNum = 1;
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
         GameObject timer = gameObject.transform.Find("TimerV1").gameObject;
         timerImages = timer.GetComponentsInChildren<ImageDigitAnimator>();
         //Debug.Log("Timer Images Animators Length: " + timerImages.Length);
+        currentWave = new Wave(waveNum, spawnPoints, enemies);
         TimerAnimators(gameTimer);
+        waveBackground.SetActive(false);
 
     }
 
@@ -55,14 +61,22 @@ public class GameSession : MonoBehaviour
     void Update()
     {
         UpdateTimers();
-        SpawnEnemies();
     }
 
     private void UpdateTimers()
     {
         gameTimer -= Time.deltaTime;
-        enemySpawnTimer += Time.deltaTime;
 
+
+
+        // updating the current running wave
+        currentWave.Update();
+
+        //waveBackground.en
+        // here we are grabbing the remaining time from the wave timer and
+        // updating the UI timer
+
+        // Here i may want to differentiate between a WAVE and DOWNTIME
         TimerAnimators(gameTimer);
 
 
@@ -85,30 +99,6 @@ public class GameSession : MonoBehaviour
             }
 
         }
-    }
-
-    private Transform RandomSpawn()
-    {
-        int numSpawnPoints = spawnPoints.Length;
-        return spawnPoints[Random.Range(0, numSpawnPoints)].transform;
-    }
-
-    private void SpawnEnemies()
-    {
-        if (enemySpawnTimer >= enemySpawnTime)
-        {
-            if (numEnemies < MaxEnemies)
-            {
-                Vector3 spawPos = RandomSpawn().localPosition;
-                Instantiate(BurgerMan, spawPos, transform.rotation);
-                AddEnemy();
-                enemySpawnTimer = 0f;
-            }
-        }
-    }
-    public void AddEnemy()
-    {
-        numEnemies += 1;
     }
 
 }
