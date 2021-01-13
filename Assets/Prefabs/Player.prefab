@@ -128,18 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f872fd443b40940cfb078b3cd6dce7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1592352039007311857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5862723067707136306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f872fd443b40940cfb078b3cd6dce7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1592352039799401913
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,18 +163,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1592352039808573519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4983701658535266039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f872fd443b40940cfb078b3cd6dce7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1592352040309619498
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,8 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a8c7b3ca9ba4169a13ca850ecf5fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 9
-  jumpSpeed: 24
   leekDurability: 20
   carrotAmmo: 20
   carrotBullet: {fileID: 6045885304080089433, guid: d0d69ec5dbcf14c7e9fddecc0ad7ac8e,
@@ -348,6 +322,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.875, y: 1.65625}
   m_Direction: 0
+--- !u!114 &1592352039808573519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4983701658535266039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f872fd443b40940cfb078b3cd6dce7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5572027284329316375
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +379,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5189827, y: -0.13604063}
+  m_Offset: {x: 0.5399141, y: -0.059292257}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -404,7 +390,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1145781, y: 0.89805114}
+  m_Size: {x: 1.1564409, y: 0.42360675}
   m_EdgeRadius: 0
 --- !u!114 &3322887125099125250
 MonoBehaviour:
@@ -419,7 +405,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTime: 0.5
-  attackTimer: 0
+--- !u!114 &1592352039007311857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5862723067707136306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f872fd443b40940cfb078b3cd6dce7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7298892952302083814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,15 +692,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0ed3d3ee86e14763af9288ae53d7dd6, type: 3}
---- !u!1 &4983701658535266039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 408716707614507540, guid: d0ed3d3ee86e14763af9288ae53d7dd6,
-    type: 3}
-  m_PrefabInstance: {fileID: 4649306835078366435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7620139331638659216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2973936749826952307, guid: d0ed3d3ee86e14763af9288ae53d7dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4649306835078366435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4983701658535266039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 408716707614507540, guid: d0ed3d3ee86e14763af9288ae53d7dd6,
     type: 3}
   m_PrefabInstance: {fileID: 4649306835078366435}
   m_PrefabAsset: {fileID: 0}

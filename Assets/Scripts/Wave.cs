@@ -41,7 +41,7 @@ public class Wave
         this.enemies = enemies;
         enemySpawnTimer = 0f;
         numEnemies = 0;
-        maxEnemies = 3;
+        maxEnemies = 2;
         this.waveEnemies = new GameObject[5];
 
     }

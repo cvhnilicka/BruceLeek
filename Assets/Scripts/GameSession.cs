@@ -72,7 +72,7 @@ public class GameSession : MonoBehaviour
         {
             if (!waveBackground.activeInHierarchy) waveBackground.SetActive(true);
 
-            Debug.Log("IN WAVE");
+            //Debug.Log("IN WAVE");
 
             currentWave.Update();
 
@@ -87,12 +87,12 @@ public class GameSession : MonoBehaviour
         else if (breakTimer > 0f && currentWave == null)
         {
             if (waveBackground.activeInHierarchy) waveBackground.SetActive(false);
-            Debug.Log("Break TImer");
+            //Debug.Log("Break TImer");
             breakTimer -= Time.deltaTime;
         }
         else
         {
-            Debug.Log("NEW WAVE");
+            //Debug.Log("NEW WAVE");
             currentWave = new Wave(waveNum += 1, spawnPoints, enemies);
         }
     }

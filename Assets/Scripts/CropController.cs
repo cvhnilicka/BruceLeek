@@ -8,7 +8,8 @@ public class CropController : MonoBehaviour
     [SerializeField] float growTime = 15f;
 
     Animator myAnimator;
-    BoxCollider2D myHarvestCollider;
+    HarvestableComponent myHarvestableComponent;
+    PieTimer myPieTimer;
 
 
     float growTimer;
@@ -19,8 +20,8 @@ public class CropController : MonoBehaviour
     {
         growTimer = 0f;
         myAnimator = GetComponent<Animator>();
-        myHarvestCollider = GetComponent<BoxCollider2D>();
-        myHarvestCollider.enabled = false;
+        myPieTimer = GetComponentInChildren<PieTimer>();
+        myHarvestableComponent = GetComponentInChildren<HarvestableComponent>();
         grow = false;
         harvest = false;
         StartGrow();
@@ -30,10 +31,10 @@ public class CropController : MonoBehaviour
     void Update()
     {
         if (grow) Grow();
-        if (harvest) Harvestable();
+        if (harvest) myHarvestableComponent.EnableHarvestable();
         if (growTimer < 0)
         {
-            myHarvestCollider.enabled = false;
+            myHarvestableComponent.DisableHarvestable();
         }
 
     }
@@ -45,17 +46,12 @@ public class CropController : MonoBehaviour
 
     }
 
-    private void Harvestable()
-    {
-        myHarvestCollider.enabled = true;
-    }
-
     public void Harvest()
     {
         growTimer = -1f;
         float perc = growTimer / growTime;
         myAnimator.SetFloat("Percentage", perc);
-        //myHarvestCollider.enabled = false;
+        myPieTimer.SetTimerPercentage(perc);
         grow = false;
         harvest = false;
     }
@@ -65,6 +61,8 @@ public class CropController : MonoBehaviour
         growTimer += Time.deltaTime;
         float perc = growTimer / growTime;
         myAnimator.SetFloat("Percentage", perc);
+        myPieTimer.SetTimerPercentage(perc);
+
         if (perc > 1.0)
         {
             grow = false;

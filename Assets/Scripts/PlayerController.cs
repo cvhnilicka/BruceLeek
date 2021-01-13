@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("crops")))
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("harvestable")))
         {
             transform.parent.GetComponentInChildren<EBlink>().EnableEblink();
             overHarvestableCrop = true;
@@ -161,20 +161,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("crops")))
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("harvestable")))
         {
            
             if (grabCrops && overHarvestableCrop)
             {
                 Debug.Log("collision gameobject name: " + collision.gameObject.name);
                 // need to harvest crops here and then restart grow process
-                collision.transform.GetComponent<CropController>().Harvest();
-                if (collision.gameObject.name.Contains("CarrotCrop"))
+                collision.transform.GetComponentInParent<CropController>().Harvest();
+                //if (collision.transform.parent.name)
+                if (collision.transform.parent.name.Contains("CarrotCrop"))
                 {
                     print("UPDATING ORANGE METER");
                     UpdateOrangeMeter(carrotAmmo);
                 }
-                else if (collision.gameObject.name.Contains("LeekCrop"))
+                else if (collision.transform.parent.name.Contains("LeekCrop"))
                 {
                     UpdateGreenMeter(leekDurability);
                 }

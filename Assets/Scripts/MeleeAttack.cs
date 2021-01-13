@@ -7,33 +7,35 @@ public class MeleeAttack : MonoBehaviour
 
     BoxCollider2D myCollider;
 
-    [SerializeField] float attackTime = .5f;
-    [SerializeField] float attackTimer;
+    [SerializeField] float attackTime = .2f;
+    float attackTimer;
+    float attackCountdown;
     // Start is called before the first frame update
     void Start()
     {
         myCollider = GetComponent<BoxCollider2D>();
         myCollider.enabled = false;
-        attackTimer = 99f;
+        attackCountdown = 99f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (attackTimer >= attackTime)
+        if (attackCountdown >= attackTime)
         {
             AttackDeactivate();
         }
-        attackTimer += Time.deltaTime;
+        attackCountdown += Time.deltaTime;
     }
 
     public void AttackActivate()
     {
-        if (attackTimer >= attackTime)
+        if (attackCountdown >= attackTime)
         {
             //Debug.Log("Attacking");
             myCollider.enabled = true;
-            attackTimer = 0f;
+            attackCountdown = 0f;
+            //attackTimer = attackTime;
         }   
     }
 
