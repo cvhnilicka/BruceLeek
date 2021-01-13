@@ -58805,6 +58805,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9214657409904362742, guid: 74ee7ce6d333b44c59e226de2eeaba5f,
         type: 3}
+      propertyPath: breakTime
+      value: 10.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214657409904362742, guid: 74ee7ce6d333b44c59e226de2eeaba5f,
+        type: 3}
       propertyPath: MaxEnemies
       value: 5
       objectReference: {fileID: 0}

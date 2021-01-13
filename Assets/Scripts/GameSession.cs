@@ -22,7 +22,7 @@ public class GameSession : MonoBehaviour
 
 
     float breakTimer;
-    float breakTime = 5f;
+    [SerializeField] float breakTime = 10f;
 
     float gameTimer = 120f;
 
@@ -60,23 +60,23 @@ public class GameSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateTimers();
+        WaveController();
+        TimerAnimators(breakTimer);
+
     }
 
-    private void UpdateTimers()
+    private void WaveController()
     {
-        gameTimer -= Time.deltaTime;
-
-
-
         // updating the current running wave
         if (currentWave != null)
         {
+            if (!waveBackground.activeInHierarchy) waveBackground.SetActive(true);
+
             Debug.Log("IN WAVE");
 
             currentWave.Update();
 
-            
+
             if (currentWave.WaveComplete())
             {
                 currentWave = null;
@@ -86,6 +86,7 @@ public class GameSession : MonoBehaviour
         }
         else if (breakTimer > 0f && currentWave == null)
         {
+            if (waveBackground.activeInHierarchy) waveBackground.SetActive(false);
             Debug.Log("Break TImer");
             breakTimer -= Time.deltaTime;
         }
@@ -94,17 +95,8 @@ public class GameSession : MonoBehaviour
             Debug.Log("NEW WAVE");
             currentWave = new Wave(waveNum += 1, spawnPoints, enemies);
         }
-        TimerAnimators(breakTimer);
-
-
-        //waveBackground.en
-        // here we are grabbing the remaining time from the wave timer and
-        // updating the UI timer
-
-        // Here i may want to differentiate between a WAVE and DOWNTIME
-
-
     }
+
 
     private void TimerAnimators(float time)
     {
