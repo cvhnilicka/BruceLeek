@@ -70,14 +70,38 @@ public class GameSession : MonoBehaviour
 
 
         // updating the current running wave
-        currentWave.Update();
+        if (currentWave != null)
+        {
+            Debug.Log("IN WAVE");
+
+            currentWave.Update();
+
+            
+            if (currentWave.WaveComplete())
+            {
+                currentWave = null;
+                breakTimer = breakTime;
+            }
+
+        }
+        else if (breakTimer > 0f && currentWave == null)
+        {
+            Debug.Log("Break TImer");
+            breakTimer -= Time.deltaTime;
+        }
+        else
+        {
+            Debug.Log("NEW WAVE");
+            currentWave = new Wave(waveNum += 1, spawnPoints, enemies);
+        }
+        TimerAnimators(breakTimer);
+
 
         //waveBackground.en
         // here we are grabbing the remaining time from the wave timer and
         // updating the UI timer
 
         // Here i may want to differentiate between a WAVE and DOWNTIME
-        TimerAnimators(gameTimer);
 
 
     }

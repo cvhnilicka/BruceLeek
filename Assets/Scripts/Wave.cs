@@ -24,8 +24,10 @@ public class Wave
     private int waveNum;
     private GameObject[] spawnPoints;
     private GameObject[] waveEnemies;
+    private GameObject[] enemies;
     int maxEnemies;
     int numEnemies;
+    int activeEnemies;
 
 
 
@@ -36,18 +38,20 @@ public class Wave
     {
         this.waveNum = waveNum;
         this.spawnPoints = spawnPoints;
-        this.waveEnemies = enemies;
+        this.enemies = enemies;
         enemySpawnTimer = 0f;
         numEnemies = 0;
         maxEnemies = 3;
+        this.waveEnemies = new GameObject[5];
+
     }
 
 
     public void Update()
     {
+        activeEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         enemySpawnTimer += Time.deltaTime;
         SpawnEnemies();
-        //Debug.Log("Wave Remaining Duration: " + this.duration);
     }
 
 
@@ -59,33 +63,34 @@ public class Wave
 
     private GameObject RandomEnemy()
     {
-        int numEnemies = waveEnemies.Length;
+        int numEnemies = enemies.Length;
 
-        return this.waveEnemies[Random.Range(0, numEnemies)];
+        return this.enemies[Random.Range(0, numEnemies-1)];
     }
 
-    public void AddEnemy()
+    public bool WaveComplete()
     {
-        numEnemies += 1;
+        if (numEnemies == maxEnemies && activeEnemies == 0) return true;
+        else return false;
     }
 
 
     private void SpawnEnemies()
     {
-        Debug.Log("enemySpawnTimer: " + enemySpawnTimer);
 
         if (enemySpawnTimer >= enemySpawnTime)
         {
 
             if (numEnemies < maxEnemies)
             {
-                Debug.Log("Spawning Enemies!");
 
                 Vector3 spawPos = RandomSpawn().localPosition;
-                GameObject.Instantiate(RandomEnemy(), spawPos, Quaternion.identity);
-                AddEnemy();
+                Object.Instantiate(RandomEnemy(), spawPos, Quaternion.identity);
+                numEnemies += 1;
                 enemySpawnTimer = 0f;
             }
         }
     }
+
+
 }

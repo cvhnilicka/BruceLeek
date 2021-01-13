@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - SpawnPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX
