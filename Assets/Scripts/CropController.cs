@@ -9,6 +9,7 @@ public class CropController : MonoBehaviour
 
     Animator myAnimator;
     HarvestableComponent myHarvestableComponent;
+    PlantableComponent myPlantableComponent;
     PieTimer myPieTimer;
 
 
@@ -22,6 +23,7 @@ public class CropController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myPieTimer = GetComponentInChildren<PieTimer>();
         myHarvestableComponent = GetComponentInChildren<HarvestableComponent>();
+        myPlantableComponent = GetComponentInChildren<PlantableComponent>();
         grow = false;
         harvest = false;
         StartGrow();
@@ -35,6 +37,12 @@ public class CropController : MonoBehaviour
         if (growTimer < 0)
         {
             myHarvestableComponent.DisableHarvestable();
+        }
+        // here i need to figure out how to enable plantable
+
+        if (!grow && !harvest)
+        {
+            myPlantableComponent.EnablePlantable();
         }
 
     }
@@ -69,4 +77,12 @@ public class CropController : MonoBehaviour
             harvest = true;
         }
     }
+
+    //public void PlantCrop(int crop)
+    //{
+    //    switch(crop)
+    //    {
+    //        case 0: 
+    //    }
+    //}
 }

@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     bool isAlive = true;
     bool overHarvestableCrop;
     bool grabCrops;
+    bool plant;
+    bool overPlantablePatch;
 
 
     // cached componenets
@@ -47,7 +49,9 @@ public class PlayerController : MonoBehaviour
         UpdateGreenMeter(this.leekDurability);
         damageTimer = 99f;
         overHarvestableCrop = false;
+        overPlantablePatch = false;
         grabCrops = false;
+        plant = false;
 
     }
 
@@ -68,6 +72,7 @@ public class PlayerController : MonoBehaviour
 
         Attack();
         if (overHarvestableCrop) GrabCrops();
+        if (overPlantablePatch) PlantCrops();
 
         damageTimer += Time.deltaTime;
         //JumpAnimation();
@@ -97,7 +102,15 @@ public class PlayerController : MonoBehaviour
         {
             grabCrops = true;
             myAnimator.SetTrigger("Garden");
-            //Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
+        }
+    }
+
+    private void PlantCrops()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Plant"))
+        {
+            plant = true;
+            myAnimator.SetTrigger("Garden");
         }
     }
 
@@ -112,17 +125,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void JumpAnimation()
-    {
-        if (Mathf.Abs(myBody.velocity.y) > 0)
-        {
-            myAnimator.SetBool("Jumping", true);
-        }
-        else
-        {
-            myAnimator.SetBool("Jumping", false);
-        }
-    }
 
     private void WalkAnimation()
     {
@@ -154,25 +156,63 @@ public class PlayerController : MonoBehaviour
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("harvestable")))
         {
-            transform.parent.GetComponentInChildren<EBlink>().EnableEblink();
+            transform.parent.GetComponentInChildren<BlinkerComponent>().SetHarvestable();
             overHarvestableCrop = true;
+        }
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("plantable")))
+        {
+            transform.parent.GetComponentInChildren<BlinkerComponent>().SetPlantable();
+            overPlantablePatch = true;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        HarvestCollisionHandler(collision);
+        PlanterCollisionHandler(collision);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        transform.parent.transform.GetComponentInChildren<BlinkerComponent>().DisableBlinker();
+        overPlantablePatch = false;
+        overHarvestableCrop = false;
+
+    }
+
+    private void PlanterCollisionHandler(Collider2D collision)
+    {
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("plantable")))
+        {
+            Debug.Log("PLANT1");
+
+            if (plant && overPlantablePatch)
+            {
+                collision.transform.parent.GetComponent<CropController>().StartGrow();
+                plant = false;
+                overPlantablePatch = false;
+                // will have to plant here somehow...
+                //collision.transform.GetComponentInParent<CropController>().Harvest();
+                Debug.Log("PLANT2");
+            }
+        }
+    }
+
+
+
+    private void HarvestCollisionHandler(Collider2D collision)
+    {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("harvestable")))
         {
-           
+
             if (grabCrops && overHarvestableCrop)
             {
-                Debug.Log("collision gameobject name: " + collision.gameObject.name);
+                //Debug.Log("collision gameobject name: " + collision.gameObject.name);
                 // need to harvest crops here and then restart grow process
                 collision.transform.GetComponentInParent<CropController>().Harvest();
-                //if (collision.transform.parent.name)
+
                 if (collision.transform.parent.name.Contains("CarrotCrop"))
                 {
-                    print("UPDATING ORANGE METER");
                     UpdateOrangeMeter(carrotAmmo);
                 }
                 else if (collision.transform.parent.name.Contains("LeekCrop"))
@@ -181,25 +221,8 @@ public class PlayerController : MonoBehaviour
                 }
                 overHarvestableCrop = false;
                 grabCrops = false;
-                //collision.transform.GetComponentInChildren<CropController>().Harvest();
             }
         }
     }
-
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-     
-            
-
-      
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        transform.parent.transform.GetComponentInChildren<EBlink>().DisableEblink();
-
-    }
-
-
 
 }

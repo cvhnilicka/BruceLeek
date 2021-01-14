@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7378577673661527878}
   - component: {fileID: 3096011195146086709}
   - component: {fileID: 8549114282238180686}
-  - component: {fileID: 7865397409423060314}
   - component: {fileID: 151728034397985894}
+  - component: {fileID: 5278476620673773924}
   m_Layer: 8
-  m_Name: E-Blink
+  m_Name: Blinker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151728034397985895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.905, y: 0.469, z: 0}
-  m_LocalScale: {x: 0.33738, y: 0.33738, z: 0.33738}
+  m_LocalPosition: {x: 1.9084, y: 1.231, z: 0}
+  m_LocalScale: {x: 1.9842502, y: 1.3354836, z: 0.33738}
   m_Children: []
   m_Father: {fileID: 1592352039799401912}
   m_RootOrder: 2
@@ -44,7 +44,7 @@ Animator:
   m_GameObject: {fileID: 151728034397985895}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31c6dcda136604d31b9eacd5967012b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6ed95deceb8d407e9ea36a1ced80ced, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -92,30 +92,18 @@ SpriteRenderer:
   m_SortingLayerID: 1839376183
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4951468393072289200, guid: e97f90cdca3ae46e6b93deb63f3d8b0c,
+  m_Sprite: {fileID: -6025629143296522705, guid: ae0d7c2d6c44c4e6698f6308f0a2d462,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7865397409423060314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151728034397985895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cea1d0c26e0f4219b9fc46bb7432913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &151728034397985894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +114,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f872fd443b40940cfb078b3cd6dce7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5278476620673773924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151728034397985895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2517d61ff85b4a07bb3769fa77efc0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1592352039799401913

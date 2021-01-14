@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EBlink : MonoBehaviour
+public class BlinkerComponent : MonoBehaviour
 {
-
     SpriteRenderer myRenderer;
     Animator myAnimator;
     // Start is called before the first frame update
@@ -16,25 +15,47 @@ public class EBlink : MonoBehaviour
         myAnimator.enabled = false;
     }
 
-    public void EnableEblink()
+    public void SetHarvestable()
+    {
+        EnableBlinker();
+        myAnimator.SetBool("harvestable", true);
+    }
+
+    public void DisableHarvestable()
+    {
+        myAnimator.SetBool("harvestable", false);
+
+    }
+
+    public void SetPlantable()
+    {
+        EnableBlinker();
+        myAnimator.SetBool("plantable", true);
+    }
+
+    public void DisablePlantable()
+    {
+        myAnimator.SetBool("plantable", false);
+
+    }
+
+    public void EnableBlinker()
     {
         myRenderer.enabled = true;
         myAnimator.enabled = true;
     }
     public void DisableBlinker()
     {
+        myAnimator.SetBool("plantable", false);
+        myAnimator.SetBool("harvestable", false);
         myRenderer.enabled = false;
         myAnimator.enabled = false;
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        //transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-        //if (transform.parent.transform.localScale.x < 0)
-        //{
-        //    transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-        //} 
-
+        
     }
 }

@@ -21,7 +21,6 @@ public class HarvestableComponent : MonoBehaviour
 
     public void EnableHarvestable()
     {
-        Debug.Log("HARVESTABLE");
         myHarvestCollider.enabled = true;
     }
 
