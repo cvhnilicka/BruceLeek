@@ -31,8 +31,6 @@ public class MovementController : MonoBehaviour
     }
 
 
-
-
     private void Run()
     {
         float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");

@@ -6,17 +6,17 @@ public class UIFollowScript : MonoBehaviour
 {
 
     Vector3 diff;
-    PlayerController playerObj;
+    Transform playerObj;
     // Start is called before the first frame update
     void Start()
     {
-        playerObj = transform.parent.GetComponentInChildren<PlayerController>();
-        diff = playerObj.transform.position - transform.position;
+        playerObj = transform.parent.GetComponentInChildren<MovementController>().transform;
+        diff = playerObj.position - transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = playerObj.transform.position-diff;
+        transform.position = playerObj.position-diff;
     }
 }

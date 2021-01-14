@@ -65,11 +65,7 @@ public class GameSession : MonoBehaviour
     {
         WaveController();
         TimerAnimators(breakTimer);
-        if (waveNum > 1)
-        {
-            Debug.Log("UPGRADE!!\nWave Number: " + waveNum);
-            player.Upgrade();
-        }
+        
     }
 
     private void WaveController()
