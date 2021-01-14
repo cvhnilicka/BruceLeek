@@ -21,6 +21,7 @@ public class SkillTreeController : MonoBehaviour
 
 
     HealthBranch healthBranch;
+    Animator myAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class SkillTreeController : MonoBehaviour
         currentPatchLevel = 0;
         currentWeaponDamageLevel = 0;
 
-
+        myAnimator = GetComponent<Animator>();
         healthBranch = GetComponentInChildren<HealthBranch>();
     }
 
@@ -101,5 +102,13 @@ public class SkillTreeController : MonoBehaviour
     {
         return this.WeaponDamageTree[currentWeaponDamageLevel];
     }
-    
+
+    public void Display(bool display)
+    {
+        //gameObject.SetActive(display);
+        healthBranch.gameObject.SetActive(display);
+        myAnimator.SetBool("Visible", display);
+
+    }
+
 }

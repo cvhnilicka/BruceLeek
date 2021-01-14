@@ -68,10 +68,7 @@ public class PlayerController : MonoBehaviour
 
     public void SkillTree()
     {
-        if (!inWave)
-            skillTree.gameObject.SetActive(true);
-        else
-            skillTree.gameObject.SetActive(false);
+        skillTree.Display(!inWave);
     }
 
     public void Upgrade()
