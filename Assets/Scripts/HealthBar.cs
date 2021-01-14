@@ -35,6 +35,21 @@ public class HealthBar : MonoBehaviour
         }
     }
 
+    public void SetHealth(int health)
+    {
+        this.TotalHealth = health;
+    }
+
+    public int GetCurrentHealth()
+    {
+        return this.currentHealth;
+    }
+
+    public int GetTotalHealth()
+    {
+        return this.TotalHealth;
+    }
+
 
     public int LargeHit()
     {

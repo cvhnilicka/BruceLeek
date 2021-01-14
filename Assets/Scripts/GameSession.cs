@@ -13,6 +13,8 @@ public class GameSession : MonoBehaviour
     GameObject[] spawnPoints;
     ImageDigitAnimator[] timerImages;
 
+    PlayerController player;
+
  
 
     Wave currentWave;
@@ -49,6 +51,7 @@ public class GameSession : MonoBehaviour
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
         GameObject timer = gameObject.transform.Find("TimerV1").gameObject;
         timerImages = timer.GetComponentsInChildren<ImageDigitAnimator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //Debug.Log("Timer Images Animators Length: " + timerImages.Length);
         currentWave = new Wave(waveNum, spawnPoints, enemies);
         TimerAnimators(gameTimer);
@@ -62,7 +65,11 @@ public class GameSession : MonoBehaviour
     {
         WaveController();
         TimerAnimators(breakTimer);
-
+        if (waveNum > 1)
+        {
+            Debug.Log("UPGRADE!!\nWave Number: " + waveNum);
+            player.Upgrade();
+        }
     }
 
     private void WaveController()

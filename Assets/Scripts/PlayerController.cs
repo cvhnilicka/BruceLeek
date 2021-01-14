@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     Animator myAnimator;
     Collider2D myCollider;
     HealthBar healthBar;
+    SkillTreeController skillTree;
     MeleeAttack leekAttack;
     MeterController orangeMeter;
     MeterController greenMeter;
@@ -41,7 +42,9 @@ public class PlayerController : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCollider = GetComponent<Collider2D>();
+        skillTree = transform.parent.GetComponentInChildren<SkillTreeController>();
         healthBar = transform.parent.GetComponentInChildren<HealthBar>();
+        healthBar.SetHealth(skillTree.GetHealthTreeAmount());
         leekAttack = GetComponentInChildren<MeleeAttack>();
         orangeMeter = transform.parent.transform.Find("OrangeMeter").GetComponent<MeterController>();
         UpdateOrangeMeter(this.carrotAmmo);
@@ -76,6 +79,13 @@ public class PlayerController : MonoBehaviour
 
         damageTimer += Time.deltaTime;
         //JumpAnimation();
+        Debug.Log("Total Health: " + healthBar.GetTotalHealth());
+    }
+
+    public void Upgrade()
+    {
+        skillTree.IncreaseHealthTree();
+        healthBar.SetHealth(skillTree.GetHealthTreeAmount());
     }
 
     private void Attack()
@@ -184,16 +194,13 @@ public class PlayerController : MonoBehaviour
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("plantable")))
         {
-            Debug.Log("PLANT1");
 
             if (plant && overPlantablePatch)
             {
                 collision.transform.parent.GetComponent<CropController>().StartGrow();
                 plant = false;
                 overPlantablePatch = false;
-                // will have to plant here somehow...
                 //collision.transform.GetComponentInParent<CropController>().Harvest();
-                Debug.Log("PLANT2");
             }
         }
     }
