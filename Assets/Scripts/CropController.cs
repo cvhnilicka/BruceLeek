@@ -44,6 +44,10 @@ public class CropController : MonoBehaviour
         {
             myPlantableComponent.EnablePlantable();
         }
+        else
+        {
+            myPlantableComponent.DisablePlantable();
+        }
 
     }
 
