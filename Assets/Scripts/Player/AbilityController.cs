@@ -91,17 +91,17 @@ public class AbilityController : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
-            if (parent.greenMeter.GetCurrentAmount() <= 0) return;
+            if (parent.GetGreenMeter().GetCurrentAmount() <= 0) return;
             myAnimator.SetTrigger("LeekAttack");
             leekAttack.AttackActivate();
-            parent.greenMeter.ReduceMeter(leekDurability * .2f);
+            parent.GetGreenMeter().ReduceMeter(leekDurability * .2f);
         }
         if (CrossPlatformInputManager.GetButtonDown("Fire2"))
         {
-            if (parent.orangeMeter.GetCurrentAmount() <= 0) return;
+            if (parent.GetOrangeMeter().GetCurrentAmount() <= 0) return;
             myAnimator.SetTrigger("CarrotGun");
             Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
-            parent.orangeMeter.ReduceMeter(carrotAmmo * .25f);
+            parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .25f);
         }
     }
 

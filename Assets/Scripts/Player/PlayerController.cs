@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     [Header("Components")]
     HealthBar healthBar;
     SkillTreeController skillTree;
-    public MeterController orangeMeter;
-    public MeterController greenMeter;
+    private MeterController orangeMeter;
+    private MeterController greenMeter;
     AbilityController abilities;
 
     // Start is called before the first frame update
@@ -60,6 +60,16 @@ public class PlayerController : MonoBehaviour
     {
         skillTree.IncreaseHealthTree();
         healthBar.SetHealth(skillTree.GetHealthTreeAmount());
+    }
+
+    public MeterController GetGreenMeter()
+    {
+        return this.greenMeter;
+    }
+
+    public MeterController GetOrangeMeter()
+    {
+        return this.orangeMeter;
     }
 
     
