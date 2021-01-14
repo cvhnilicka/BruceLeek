@@ -3,69 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerController : MonoBehaviour
+
+public class AbilityController : MonoBehaviour
 {
-
-
     [SerializeField] float leekDurability = 20f;
     [SerializeField] float carrotAmmo = 20f;
-
-
     public GameObject carrotBullet;
 
+
+    bool grabCrops;
+    bool plant;
+    bool overHarvestableCrop;
+    bool overPlantablePatch;
     float damageTime = 3f;
     float damageTimer;
 
-
-    // state
-    bool isAlive = true;
-    bool overHarvestableCrop;
-    bool grabCrops;
-    bool plant;
-    bool overPlantablePatch;
-
-
-    // cached componenets
     [Header("Components")]
     Rigidbody2D myBody;
     Animator myAnimator;
     Collider2D myCollider;
-    HealthBar healthBar;
-    SkillTreeController skillTree;
     MeleeAttack leekAttack;
-    MeterController orangeMeter;
-    MeterController greenMeter;
+    PlayerController parent;
 
     // Start is called before the first frame update
     void Start()
     {
-        myBody = GetComponent<Rigidbody2D>();
-        myAnimator = GetComponent<Animator>();
-        myCollider = GetComponent<Collider2D>();
-        skillTree = transform.parent.GetComponentInChildren<SkillTreeController>();
-        healthBar = transform.parent.GetComponentInChildren<HealthBar>();
-        healthBar.SetHealth(skillTree.GetHealthTreeAmount());
-        leekAttack = GetComponentInChildren<MeleeAttack>();
-        orangeMeter = transform.parent.transform.Find("OrangeMeter").GetComponent<MeterController>();
-        UpdateOrangeMeter(this.carrotAmmo);
-        greenMeter = transform.parent.transform.Find("GreenMeter").GetComponent<MeterController>();
-        UpdateGreenMeter(this.leekDurability);
-        damageTimer = 99f;
         overHarvestableCrop = false;
         overPlantablePatch = false;
         grabCrops = false;
         plant = false;
+        parent = GetComponentInParent<PlayerController>();
+        myAnimator = GetComponent<Animator>();
+        myCollider = GetComponent<Collider2D>();
+        myBody = GetComponent<Rigidbody2D>();
+        leekAttack = GetComponentInChildren<MeleeAttack>();
 
     }
 
-    private void UpdateGreenMeter(float greenAmount)
-    {
-        greenMeter.ResetTotal(greenAmount);
-    }
-    private void UpdateOrangeMeter(float orangeAmount)
-    {
-        orangeMeter.ResetTotal(orangeAmount);
-    }
+  
 
     // Update is called once per frame
     void Update()
@@ -76,52 +51,16 @@ public class PlayerController : MonoBehaviour
         Attack();
         if (overHarvestableCrop) GrabCrops();
         if (overPlantablePatch) PlantCrops();
-
-        damageTimer += Time.deltaTime;
-        //JumpAnimation();
-        Debug.Log("Total Health: " + healthBar.GetTotalHealth());
     }
 
-    public void Upgrade()
+    public float GetCarrotAmmo()
     {
-        skillTree.IncreaseHealthTree();
-        healthBar.SetHealth(skillTree.GetHealthTreeAmount());
+        return this.carrotAmmo;
     }
 
-    private void Attack()
+    public float GetLeekDurability()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Fire1"))
-        {
-            if (greenMeter.GetCurrentAmount() <= 0) return;
-            myAnimator.SetTrigger("LeekAttack");
-            leekAttack.AttackActivate();
-            greenMeter.ReduceMeter(leekDurability * .2f);
-        }
-        if (CrossPlatformInputManager.GetButtonDown("Fire2"))
-        {
-            if (orangeMeter.GetCurrentAmount() <= 0) return;
-            myAnimator.SetTrigger("CarrotGun");
-            Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
-            orangeMeter.ReduceMeter(carrotAmmo * .25f);
-        }
-    }
-
-    private void GrabCrops()
-    {
-        if (CrossPlatformInputManager.GetButtonDown("Harvest"))
-        {
-            grabCrops = true;
-            myAnimator.SetTrigger("Garden");
-        }
-    }
-
-    private void PlantCrops()
-    {
-        if (CrossPlatformInputManager.GetButtonDown("Plant"))
-        {
-            plant = true;
-            myAnimator.SetTrigger("Garden");
-        }
+        return this.leekDurability;
     }
 
 
@@ -148,6 +87,49 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Attack()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Fire1"))
+        {
+            if (parent.GetGreenMeter().GetCurrentAmount() <= 0) return;
+            myAnimator.SetTrigger("LeekAttack");
+            leekAttack.AttackActivate();
+            parent.GetGreenMeter().ReduceMeter(leekDurability * .2f);
+        }
+        if (CrossPlatformInputManager.GetButtonDown("Fire2"))
+        {
+            if (parent.GetOrangeMeter().GetCurrentAmount() <= 0) return;
+            myAnimator.SetTrigger("CarrotGun");
+            Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
+            parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .25f);
+        }
+    }
+
+    private void GrabCrops()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Harvest"))
+        {
+            grabCrops = true;
+            myAnimator.SetTrigger("Garden");
+        }
+    }
+
+    private void PlantCrops()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Plant"))
+        {
+            plant = true;
+            myAnimator.SetTrigger("Garden");
+        }
+    }
+
+
+
+    /*
+     * Ability Collision Handlers
+     * 
+     * **/
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -155,12 +137,15 @@ public class PlayerController : MonoBehaviour
         {
             if (damageTimer >= damageTime)
             {
-                healthBar.LargeHit();
+                //healthBar.LargeHit();
+                parent.TakeDamage(2f);
                 damageTimer = 0;
             }
         }
-       
+
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -206,7 +191,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
     private void HarvestCollisionHandler(Collider2D collision)
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("harvestable")))
@@ -220,16 +204,15 @@ public class PlayerController : MonoBehaviour
 
                 if (collision.transform.parent.name.Contains("CarrotCrop"))
                 {
-                    UpdateOrangeMeter(carrotAmmo);
+                    parent.UpdateOrangeMeter(carrotAmmo);
                 }
                 else if (collision.transform.parent.name.Contains("LeekCrop"))
                 {
-                    UpdateGreenMeter(leekDurability);
+                    parent.UpdateGreenMeter(leekDurability);
                 }
                 overHarvestableCrop = false;
                 grabCrops = false;
             }
         }
     }
-
 }

@@ -15,7 +15,6 @@ public class MeterController : MonoBehaviour
     void Start()
     {
         myAnimator = GetComponent<Animator>();
-        //TotalHealth = transform.parent.GetComponent<PlayerController>().MaxHealth;
         currentAmount = Total;
     }
 
@@ -64,7 +63,8 @@ public class MeterController : MonoBehaviour
 
     private void AnimationController()
     {
-        myAnimator.SetFloat("Percentage", currentAmount/Total);
+        if (myAnimator != null)
+            myAnimator.SetFloat("Percentage", currentAmount/Total);
     }
 
 }

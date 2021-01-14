@@ -137,6 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592352039799401912}
+  - component: {fileID: 5292835035544694782}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -164,6 +165,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5292835035544694782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592352039799401913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a8c7b3ca9ba4169a13ca850ecf5fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orangeMeter: {fileID: 0}
+  greenMeter: {fileID: 0}
 --- !u!1 &1592352040309619498
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,11 +188,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592352040309619493}
-  - component: {fileID: 1592352040309619494}
   - component: {fileID: 1592352040309619495}
   - component: {fileID: 1592352040309619492}
   - component: {fileID: 1592352040309619488}
   - component: {fileID: 1592352040309619489}
+  - component: {fileID: 1697375401}
+  - component: {fileID: 6051701444251642163}
   m_Layer: 8
   m_Name: PlayerObj
   m_TagString: Player
@@ -200,22 +216,6 @@ Transform:
   m_Father: {fileID: 1592352039799401912}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1592352040309619494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592352040309619498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a8c7b3ca9ba4169a13ca850ecf5fdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leekDurability: 20
-  carrotAmmo: 20
-  carrotBullet: {fileID: 6045885304080089433, guid: d0d69ec5dbcf14c7e9fddecc0ad7ac8e,
-    type: 3}
 --- !u!95 &1592352040309619495
 Animator:
   serializedVersion: 3
@@ -323,6 +323,36 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.875, y: 1.65625}
   m_Direction: 0
+--- !u!114 &1697375401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592352040309619498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e086e78d74a4e7baa2d9de3c5f5a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 10
+  jumpSpeed: 24
+--- !u!114 &6051701444251642163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592352040309619498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e8d7533011a40b79c730038b587647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leekDurability: 20
+  carrotAmmo: 20
+  carrotBullet: {fileID: 6045885304080089433, guid: d0d69ec5dbcf14c7e9fddecc0ad7ac8e,
+    type: 3}
 --- !u!1 &2024036546282599773
 GameObject:
   m_ObjectHideFlags: 0
