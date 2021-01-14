@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private MeterController greenMeter;
     AbilityController abilities;
 
+    bool inWave = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,21 @@ public class PlayerController : MonoBehaviour
         healthBar.SetHealth(skillTree.GetHealthTreeAmount());
         abilities = GetComponentInChildren<AbilityController>();
 
-
-
         orangeMeter = transform.Find("OrangeMeter").GetComponent<MeterController>();
         UpdateOrangeMeter(abilities.GetCarrotAmmo());
         greenMeter = transform.Find("GreenMeter").GetComponent<MeterController>();
         UpdateGreenMeter(abilities.GetLeekDurability());
 
+
+    }
+    public void SetInWave(bool inWave)
+    {
+        this.inWave = inWave;
+    }
+
+    public bool GetInWave()
+    {
+        return this.inWave;
 
     }
 
@@ -52,8 +62,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        SkillTree();
+    }
+
+    public void SkillTree()
+    {
+        if (!inWave)
+            skillTree.gameObject.SetActive(true);
+        else
+            skillTree.gameObject.SetActive(false);
     }
 
     public void Upgrade()

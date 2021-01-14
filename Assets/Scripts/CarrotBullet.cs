@@ -15,7 +15,7 @@ public class CarrotBullet : MonoBehaviour
     {
         carrotBody = GetComponent<Rigidbody2D>();
         float controlThrow = Mathf.Sign(CrossPlatformInputManager.GetAxis("Mouse X"));
-        float playerDir = GameObject.FindGameObjectWithTag("Player").transform.localScale.x;
+        float playerDir = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementController>().transform.localScale.x;
         carrotBody.velocity = new Vector2(fireVelocity*playerDir, 0f);
 
     }

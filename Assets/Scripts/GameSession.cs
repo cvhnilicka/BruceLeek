@@ -30,6 +30,8 @@ public class GameSession : MonoBehaviour
 
     int waveNum;
 
+    bool upgraded = false;
+
 
     private void Awake()
     {
@@ -56,6 +58,7 @@ public class GameSession : MonoBehaviour
         currentWave = new Wave(waveNum, spawnPoints, enemies);
         TimerAnimators(gameTimer);
         waveBackground.SetActive(false);
+        upgraded = false;
 
     }
 
@@ -65,6 +68,12 @@ public class GameSession : MonoBehaviour
     {
         WaveController();
         TimerAnimators(breakTimer);
+
+        if (waveNum > 1 && !upgraded)
+        {
+            player.Upgrade();
+            upgraded = true;
+        }
         
     }
 
@@ -78,7 +87,7 @@ public class GameSession : MonoBehaviour
             //Debug.Log("IN WAVE");
 
             currentWave.Update();
-
+            player.SetInWave(true);
 
             if (currentWave.WaveComplete())
             {
@@ -91,6 +100,7 @@ public class GameSession : MonoBehaviour
         {
             if (waveBackground.activeInHierarchy) waveBackground.SetActive(false);
             //Debug.Log("Break TImer");
+            player.SetInWave(false);
             breakTimer -= Time.deltaTime;
         }
         else

@@ -18,6 +18,10 @@ public class SkillTreeController : MonoBehaviour
     int[] WeaponDamageTree = new int[] { 1, 10, 20, 30 };
     private int currentWeaponDamageLevel;
     public readonly int MaxWeaponDamageLevel = 3;
+
+
+    HealthBranch healthBranch;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,30 @@ public class SkillTreeController : MonoBehaviour
         currentHealthLevel = 0;
         currentPatchLevel = 0;
         currentWeaponDamageLevel = 0;
+
+
+        healthBranch = GetComponentInChildren<HealthBranch>();
+    }
+
+    void Update()
+    {
+        HealthBranchUpdate();
+    }
+
+    void HealthBranchUpdate()
+    {
+        for(int i = 0; i <= currentHealthLevel; i++)
+        {
+            SkillTreeLeafController leaf = healthBranch.transform.
+                Find("HealthNode" + GetHealthTreeAmount().ToString()).GetComponent<SkillTreeLeafController>();
+            leaf.SelectedSprite();
+
+        }
+        if (currentHealthLevel < MaxHealthLevel)
+        {
+            healthBranch.transform.Find("HealthNode" + this.HealthTree[currentHealthLevel + 1]
+                .ToString()).GetComponent<SkillTreeLeafController>().EnableHoverCollider();
+        }
     }
 
     public int GetHealthTreeAmount()
