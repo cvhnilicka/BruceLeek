@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private MeterController greenMeter;
     AbilityController abilities;
 
+    bool inWave = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,21 @@ public class PlayerController : MonoBehaviour
         healthBar.SetHealth(skillTree.GetHealthTreeAmount());
         abilities = GetComponentInChildren<AbilityController>();
 
-
-
         orangeMeter = transform.Find("OrangeMeter").GetComponent<MeterController>();
         UpdateOrangeMeter(abilities.GetCarrotAmmo());
         greenMeter = transform.Find("GreenMeter").GetComponent<MeterController>();
         UpdateGreenMeter(abilities.GetLeekDurability());
 
+
+    }
+    public void SetInWave(bool inWave)
+    {
+        this.inWave = inWave;
+    }
+
+    public bool GetInWave()
+    {
+        return this.inWave;
 
     }
 
@@ -52,16 +62,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        SkillTree();
     }
 
-    public void Upgrade()
+    public void SkillTree()
     {
-        skillTree.IncreaseHealthTree();
-        healthBar.SetHealth(skillTree.GetHealthTreeAmount());
+        skillTree.Display(!inWave);
     }
 
+    public void UpgradeSkillTree(string leaf)
+    {
+        // can use if/else for now but might need to think of a better way to do this
+        if (leaf.Contains("HealthNode"))
+        {
+            Debug.Log("Upgrading HealthSkill Tree");
+            if (skillTree.IncreaseHealthTree())
+            {
+                healthBar.IncreaseHealthAmount(skillTree.GetHealthTreeAmount());
+            }
+        }
+    }
+
+  
     public MeterController GetGreenMeter()
     {
         return this.greenMeter;
