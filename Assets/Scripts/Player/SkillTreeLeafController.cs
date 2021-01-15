@@ -37,6 +37,11 @@ public class SkillTreeLeafController : MonoBehaviour
         myRenderer.sprite = previousState;
     }
 
+    private void OnMouseDown()
+    {
+        Debug.Log(transform.name + " was Clicked!!!!!!!!");
+    }
+
     public void SelectedSprite()
     {
         myRenderer.sprite = mySprites[2];
@@ -51,12 +56,5 @@ public class SkillTreeLeafController : MonoBehaviour
     public void DisabelHoverCollider()
     {
         myCollider.enabled = false;
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

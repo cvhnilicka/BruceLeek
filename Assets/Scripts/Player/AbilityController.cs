@@ -49,10 +49,17 @@ public class AbilityController : MonoBehaviour
         WalkAnimation();
 
         Attack();
-        if (overHarvestableCrop) GrabCrops();
-        if (overPlantablePatch) PlantCrops();
+        CropController();
         damageTimer += Time.deltaTime;
     }
+
+
+    private void CropController()
+    {
+        if (overHarvestableCrop) GrabCrops();
+        if (overPlantablePatch) PlantCrops();
+    }
+
 
     public float GetCarrotAmmo()
     {
@@ -71,6 +78,7 @@ public class AbilityController : MonoBehaviour
         bool playerHasXVelocity = Mathf.Abs(myBody.velocity.x) > Mathf.Epsilon;
         if (playerHasXVelocity)
         {
+            //Debug.Log("X Vel: " + Mathf.Abs(myBody.velocity.x));
             transform.localScale = new Vector2(Mathf.Sign(myBody.velocity.x), 1f);
         }
     }
@@ -78,13 +86,15 @@ public class AbilityController : MonoBehaviour
 
     private void WalkAnimation()
     {
-        if (Mathf.Abs(myBody.velocity.x) > Mathf.Epsilon)
+        if (Mathf.Abs(myBody.velocity.x) > 0.01f)
         {
+            print("myBody.velocity.x: " + myBody.velocity.x);
             myAnimator.SetBool("Walking", true);
         }
         else
         {
-            myAnimator.SetBool("Walking", false);
+            if (myAnimator.GetBool("Walking")) myAnimator.SetBool("Walking", false);
+
         }
     }
 
@@ -138,7 +148,6 @@ public class AbilityController : MonoBehaviour
         {
             if (damageTimer >= damageTime)
             {
-                Debug.Log("AbilityController:TakeDamage");   
                 parent.TakeDamage(2f);
                 damageTimer = 0;
             }
@@ -152,7 +161,6 @@ public class AbilityController : MonoBehaviour
         {
             if (damageTimer >= damageTime)
             {
-                Debug.Log("AbilityController:TakeDamage");
                 parent.TakeDamage(2f);
                 damageTimer = 0;
             }
@@ -162,6 +170,27 @@ public class AbilityController : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // handle blinkers upon entering the trigger collisions
+        BlinkerController(collision);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        HarvestCollisionHandler(collision);
+        PlanterCollisionHandler(collision);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // disabled blinkers when leaving collisions (triggers)
+        transform.parent.transform.GetComponentInChildren<BlinkerComponent>().DisableBlinker();
+        overPlantablePatch = false;
+        overHarvestableCrop = false;
+
+    }
+
+    private void BlinkerController(Collider2D collision)
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("harvestable")))
         {
@@ -175,31 +204,18 @@ public class AbilityController : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        HarvestCollisionHandler(collision);
-        PlanterCollisionHandler(collision);
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        transform.parent.transform.GetComponentInChildren<BlinkerComponent>().DisableBlinker();
-        overPlantablePatch = false;
-        overHarvestableCrop = false;
-
-    }
-
     private void PlanterCollisionHandler(Collider2D collision)
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("plantable")))
         {
-
+            // First make sure that we have enabled the plant action and that we are over a plantable patch
             if (plant && overPlantablePatch)
             {
+                // start regrowing on the current patch we are hovered over
                 collision.transform.parent.GetComponent<CropController>().StartGrow();
+                // reset bools
                 plant = false;
                 overPlantablePatch = false;
-                //collision.transform.GetComponentInParent<CropController>().Harvest();
             }
         }
     }
@@ -212,18 +228,20 @@ public class AbilityController : MonoBehaviour
 
             if (grabCrops && overHarvestableCrop)
             {
-                //Debug.Log("collision gameobject name: " + collision.gameObject.name);
-                // need to harvest crops here and then restart grow process
+                // Here we can harvest the crop that we are hovering over
                 collision.transform.GetComponentInParent<CropController>().Harvest();
 
+                // harvest carrot
                 if (collision.transform.parent.name.Contains("CarrotCrop"))
                 {
                     parent.UpdateOrangeMeter(carrotAmmo);
                 }
+                // harvest leek
                 else if (collision.transform.parent.name.Contains("LeekCrop"))
                 {
                     parent.UpdateGreenMeter(leekDurability);
                 }
+                // reset bools used by actions/animations
                 overHarvestableCrop = false;
                 grabCrops = false;
             }

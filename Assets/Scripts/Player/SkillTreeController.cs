@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SkillTreeController : MonoBehaviour
 {
-    //readonly Dictionary<int, int> HeatlhTree = new Dictionary<int, int>({0:10,1:15});
     int[] HealthTree = new int[] { 10, 15, 20, 25 };
     private int currentHealthLevel;
     public readonly int MaxHealthLevel = 3;
@@ -58,8 +57,6 @@ public class SkillTreeController : MonoBehaviour
 
     public int GetHealthTreeAmount()
     {
-        //print("CUrrent Health Level: " + this.currentHealthLevel);
-        //print(this.HeatlhTree[0]);
         return this.HealthTree[currentHealthLevel];
     }
 
@@ -105,7 +102,6 @@ public class SkillTreeController : MonoBehaviour
 
     public void Display(bool display)
     {
-        //gameObject.SetActive(display);
         healthBranch.gameObject.SetActive(display);
         myAnimator.SetBool("Visible", display);
 

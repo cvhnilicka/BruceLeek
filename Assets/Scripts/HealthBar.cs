@@ -77,7 +77,6 @@ public class HealthBar : MonoBehaviour
     private void AnimationController()
     {
         double d = (double)currentHealth / (double)TotalHealth * 10;
-        print("currentHealth: " + (int)d);
         myAnimator.SetInteger("Health", (int)d);
     }
 

@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        Debug.Log("TAKE DAMAGE PLAYER");
         healthBar.LargeHit();
     }
 

@@ -35,6 +35,7 @@ public class MovementController : MonoBehaviour
     {
         float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myBody.velocity.y);
+        //print(playerVelocity);
         myBody.velocity = playerVelocity;
     }
 

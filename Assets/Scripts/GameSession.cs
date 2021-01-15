@@ -84,8 +84,6 @@ public class GameSession : MonoBehaviour
         {
             if (!waveBackground.activeInHierarchy) waveBackground.SetActive(true);
 
-            //Debug.Log("IN WAVE");
-
             currentWave.Update();
             player.SetInWave(true);
 
@@ -99,13 +97,11 @@ public class GameSession : MonoBehaviour
         else if (breakTimer > 0f && currentWave == null)
         {
             if (waveBackground.activeInHierarchy) waveBackground.SetActive(false);
-            //Debug.Log("Break TImer");
             player.SetInWave(false);
             breakTimer -= Time.deltaTime;
         }
         else
         {
-            //Debug.Log("NEW WAVE");
             currentWave = new Wave(waveNum += 1, spawnPoints, enemies);
         }
     }
@@ -116,14 +112,11 @@ public class GameSession : MonoBehaviour
         int intTime = Mathf.FloorToInt(time);
         if (timerImages.Length == 3)
         {
-            //print("intTIme: " + intTime);
             for (int i = 2; i >= 0; i--)
             {
-                //timerImages[i].SetInteger()
                 int digt = intTime % 10;
                 intTime = intTime / 10;
                 timerImages[i].SetImage(digt);
-                //Debug.Log("Timer image [" + i + "] with digit: " + digt);
 
             }
 
