@@ -88,7 +88,7 @@ public class AbilityController : MonoBehaviour
     {
         if (Mathf.Abs(myBody.velocity.x) > 0.01f)
         {
-            print("myBody.velocity.x: " + myBody.velocity.x);
+
             myAnimator.SetBool("Walking", true);
         }
         else

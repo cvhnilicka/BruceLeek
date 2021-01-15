@@ -39,7 +39,11 @@ public class SkillTreeLeafController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(transform.name + " was Clicked!!!!!!!!");
+        //Debug.Log(transform.name + " was Clicked!!!!!!!!");
+        // here i should upgrade the skill tree in the player controller?
+        GameObject.FindGameObjectWithTag("Player")
+            .GetComponent<PlayerController>().UpgradeSkillTree(transform.name);
+        
     }
 
     public void SelectedSprite()

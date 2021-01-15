@@ -71,14 +71,20 @@ public class PlayerController : MonoBehaviour
         skillTree.Display(!inWave);
     }
 
-    public void Upgrade()
+    public void UpgradeSkillTree(string leaf)
     {
-        if (skillTree.IncreaseHealthTree())
+        // can use if/else for now but might need to think of a better way to do this
+        if (leaf.Contains("HealthNode"))
         {
-            healthBar.IncreaseHealthAmount(skillTree.GetHealthTreeAmount());
+            Debug.Log("Upgrading HealthSkill Tree");
+            if (skillTree.IncreaseHealthTree())
+            {
+                healthBar.IncreaseHealthAmount(skillTree.GetHealthTreeAmount());
+            }
         }
     }
 
+  
     public MeterController GetGreenMeter()
     {
         return this.greenMeter;

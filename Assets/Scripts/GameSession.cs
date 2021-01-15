@@ -69,11 +69,10 @@ public class GameSession : MonoBehaviour
         WaveController();
         TimerAnimators(breakTimer);
 
-        if (waveNum > 1 && !upgraded)
-        {
-            player.Upgrade();
-            upgraded = true;
-        }
+        //if (waveNum > 1 && !upgraded)
+        //{
+        //    upgraded = true;
+        //}
         
     }
 
