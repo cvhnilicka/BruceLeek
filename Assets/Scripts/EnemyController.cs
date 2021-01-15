@@ -39,7 +39,8 @@ public class EnemyController : MonoBehaviour
         meleeAttack = GetComponentInChildren<MeleeAttack>();
         walk = true;
         damageTimer = 99f;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player")
+            .GetComponentInChildren<MovementController>().gameObject; ;
 
     }
 

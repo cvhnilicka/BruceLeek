@@ -21,7 +21,7 @@ public class AbilityController : MonoBehaviour
     [Header("Components")]
     Rigidbody2D myBody;
     Animator myAnimator;
-    Collider2D myCollider;
+    CapsuleCollider2D myCollider;
     MeleeAttack leekAttack;
     PlayerController parent;
 
@@ -34,7 +34,7 @@ public class AbilityController : MonoBehaviour
         plant = false;
         parent = GetComponentInParent<PlayerController>();
         myAnimator = GetComponent<Animator>();
-        myCollider = GetComponent<Collider2D>();
+        myCollider = GetComponent<CapsuleCollider2D>();
         myBody = GetComponent<Rigidbody2D>();
         leekAttack = GetComponentInChildren<MeleeAttack>();
 
@@ -51,6 +51,7 @@ public class AbilityController : MonoBehaviour
         Attack();
         if (overHarvestableCrop) GrabCrops();
         if (overPlantablePatch) PlantCrops();
+        damageTimer += Time.deltaTime;
     }
 
     public float GetCarrotAmmo()
@@ -133,16 +134,29 @@ public class AbilityController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("weapon")))
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
         {
             if (damageTimer >= damageTime)
             {
-                //healthBar.LargeHit();
+                Debug.Log("AbilityController:TakeDamage");   
                 parent.TakeDamage(2f);
                 damageTimer = 0;
             }
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
+        {
+            if (damageTimer >= damageTime)
+            {
+                Debug.Log("AbilityController:TakeDamage");
+                parent.TakeDamage(2f);
+                damageTimer = 0;
+            }
+        }
     }
 
 

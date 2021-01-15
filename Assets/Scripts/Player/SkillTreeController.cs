@@ -58,7 +58,7 @@ public class SkillTreeController : MonoBehaviour
 
     public int GetHealthTreeAmount()
     {
-        print("CUrrent Health Level: " + this.currentHealthLevel);
+        //print("CUrrent Health Level: " + this.currentHealthLevel);
         //print(this.HeatlhTree[0]);
         return this.HealthTree[currentHealthLevel];
     }

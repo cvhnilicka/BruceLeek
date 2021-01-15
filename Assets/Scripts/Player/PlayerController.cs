@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        Debug.Log("TAKE DAMAGE PLAYER");
         healthBar.LargeHit();
     }
 
@@ -73,8 +74,10 @@ public class PlayerController : MonoBehaviour
 
     public void Upgrade()
     {
-        skillTree.IncreaseHealthTree();
-        healthBar.SetHealth(skillTree.GetHealthTreeAmount());
+        if (skillTree.IncreaseHealthTree())
+        {
+            healthBar.IncreaseHealthAmount(skillTree.GetHealthTreeAmount());
+        }
     }
 
     public MeterController GetGreenMeter()
