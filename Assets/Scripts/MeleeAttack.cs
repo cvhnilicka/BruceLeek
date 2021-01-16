@@ -14,6 +14,7 @@ public class MeleeAttack : MonoBehaviour
     void Start()
     {
         myCollider = GetComponent<BoxCollider2D>();
+
         myCollider.enabled = false;
         attackCountdown = 99f;
     }
@@ -32,7 +33,6 @@ public class MeleeAttack : MonoBehaviour
     {
         if (attackCountdown >= attackTime)
         {
-            //Debug.Log("Attacking");
             myCollider.enabled = true;
             attackCountdown = 0f;
             //attackTimer = attackTime;

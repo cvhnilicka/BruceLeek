@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class IsWeapon : MonoBehaviour
 {
-    [SerializeField] int weaponDamage = 1;
-
-    private void Start()
-    {
-        // Default to 1 for damage
-        //weaponDamage = 1;
-    }
+    [SerializeField] float weaponDamage = 1f;
 
 
-    public void SetWeaponDamage(int weaponDamage)
+    public void SetWeaponDamage(float weaponDamage)
     {
         this.weaponDamage = weaponDamage;
     }
-    public int GetWeaponDamage()
+    public float GetWeaponDamage()
     {
         return this.weaponDamage;
     }

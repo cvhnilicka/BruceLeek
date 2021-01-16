@@ -53,6 +53,11 @@ public class AbilityController : MonoBehaviour
         damageTimer += Time.deltaTime;
     }
 
+    public void UpgradeWeaponDamage()
+    {
+        leekAttack.GetComponent<IsWeapon>().SetWeaponDamage(parent.GetSkillTree().GetWeaponDamage() * leekAttack.GetComponent<IsWeapon>().GetWeaponDamage());
+    }
+
 
     private void CropController()
     {
@@ -100,10 +105,15 @@ public class AbilityController : MonoBehaviour
 
     private void Attack()
     {
+        // Todo: So here i will need to set the  weapon damage based on skill tree multiplier and base damage
+
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
             if (parent.GetGreenMeter().GetCurrentAmount() <= 0) return;
             myAnimator.SetTrigger("LeekAttack");
+            //print("Supposed Weapond Damage: " + (leekAttack.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage()));
+            //leekAttack.GetComponent<IsWeapon>()
+            //    .SetWeaponDamage(leekAttack.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage());
             leekAttack.AttackActivate();
             parent.GetGreenMeter().ReduceMeter(leekDurability * .2f);
         }
@@ -112,9 +122,8 @@ public class AbilityController : MonoBehaviour
             if (parent.GetOrangeMeter().GetCurrentAmount() <= 0) return;
             myAnimator.SetTrigger("CarrotGun");
             GameObject newBullet = Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
-            // Todo: So here i will need to set the carrot weapon damage based on skill tree multiplier and base damage
 
-            //newBullet.GetComponent<IsWeapon>().SetWeaponDamage()
+            newBullet.GetComponent<IsWeapon>().SetWeaponDamage(newBullet.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage());
             parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .25f);
         }
     }
