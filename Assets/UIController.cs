@@ -22,4 +22,10 @@ public class UIController : MonoBehaviour
         Text currentWave = gameObject.transform.Find("CurrentWave").GetComponent<Text>();
         currentWave.text = "Current Wave: " + waveNum;
     }
+
+    public void UpdateScore(int newScore)
+    {
+        Text score = gameObject.transform.Find("Score").GetComponent<Text>();
+        score.text = "Score: " + newScore;
+    }
 }

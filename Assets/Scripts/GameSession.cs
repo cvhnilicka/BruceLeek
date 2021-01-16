@@ -30,6 +30,7 @@ public class GameSession : MonoBehaviour
     float gameTimer = 120f;
 
     int waveNum;
+    int score;
 
     bool upgraded = false;
 
@@ -61,6 +62,7 @@ public class GameSession : MonoBehaviour
         TimerAnimators(gameTimer);
         waveBackground.SetActive(false);
         upgraded = false;
+        score = 0;
 
     }
 
@@ -72,12 +74,19 @@ public class GameSession : MonoBehaviour
         TimerAnimators(breakTimer);
         uiController.UpdateCurrentWave(waveNum);
 
-        //if (waveNum > 1 && !upgraded)
-        //{
-        //    upgraded = true;
-        //}
 
     }
+
+    //public UIController GetUIController()
+    //{
+    //    return this.uiController;
+    //}
+
+    public void UpdateUIScore(int addition)
+    {
+        this.uiController.UpdateScore(this.score += addition);
+    }
+   
 
     private void WaveController()
     {
@@ -91,6 +100,7 @@ public class GameSession : MonoBehaviour
 
             if (currentWave.WaveComplete())
             {
+                this.score += 1000;
                 currentWave = null;
                 breakTimer = breakTime;
             }
