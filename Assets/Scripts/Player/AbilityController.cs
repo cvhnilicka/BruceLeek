@@ -32,6 +32,7 @@ public class AbilityController : MonoBehaviour
         overPlantablePatch = false;
         grabCrops = false;
         plant = false;
+        damageTimer = 0f;
         parent = GetComponentInParent<PlayerController>();
         myAnimator = GetComponent<Animator>();
         myCollider = GetComponent<CapsuleCollider2D>();
@@ -154,31 +155,18 @@ public class AbilityController : MonoBehaviour
      * **/
 
 
-    //private void OnCollisionStay2D(Collision2D collision)
-    //{
-    //    if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
-    //    {
-    //        if (damageTimer >= damageTime)
-    //        {
-    //            parent.TakeDamage(2f);
-    //            damageTimer = 0;
-    //        }
-    //    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        //DamageCollisionHandler(collision);
 
-    //}
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
-        {
-            if (damageTimer >= damageTime)
-            {
-                // here i need to grab the weapon damage from the enemy and damage the player with it
-                parent.TakeDamage(collision.gameObject.GetComponentInChildren<IsWeapon>().GetWeaponDamage());
-                damageTimer = 0;
-            }
-        }
+        //DamageCollisionHandler(collision);
     }
+
+    
 
 
     //private void take
@@ -188,12 +176,15 @@ public class AbilityController : MonoBehaviour
     {
         // handle blinkers upon entering the trigger collisions
         BlinkerController(collision);
+        DamageCollisionHandler(collision);
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         HarvestCollisionHandler(collision);
         PlanterCollisionHandler(collision);
+        //DamageCollisionHandler(collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -218,7 +209,28 @@ public class AbilityController : MonoBehaviour
             overPlantablePatch = true;
         }
     }
+    private void DamageCollisionHandler(Collider2D collision)
+    {
+        if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
+        {
+            if (damageTimer >= damageTime)
+            {
+                //print(collision.gameObject.name);
+                // here i need to grab the weapon damage from the enemy and damage the player with it
+                if (collision.gameObject.tag == "Weapon")
+                {
+                    parent.TakeDamage(collision.gameObject.GetComponent<IsWeapon>().GetWeaponDamage());
 
+                }
+                else if (collision.gameObject.tag == "Enemy")
+                {
+                    parent.TakeDamage(collision.gameObject.GetComponentInChildren<IsWeapon>().GetWeaponDamage());
+
+                }
+                damageTimer = 0;
+            }
+        }
+    }
     private void PlanterCollisionHandler(Collider2D collision)
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("plantable")))
