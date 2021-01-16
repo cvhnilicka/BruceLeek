@@ -20,6 +20,7 @@ public class SkillTreeController : MonoBehaviour
 
 
     HealthBranch healthBranch;
+    PatchBranch patchBranch;
     Animator myAnimator;
 
     // Start is called before the first frame update
@@ -32,11 +33,29 @@ public class SkillTreeController : MonoBehaviour
 
         myAnimator = GetComponent<Animator>();
         healthBranch = GetComponentInChildren<HealthBranch>();
+        patchBranch = GetComponentInChildren<PatchBranch>();
     }
 
     void Update()
     {
         HealthBranchUpdate();
+        PatchesBranchUpdate();
+    }
+
+    void PatchesBranchUpdate()
+    {
+        for (int i = 0; i <= currentPatchLevel; i++)
+        {
+            SkillTreeLeafController leaf = patchBranch.transform.
+                Find("PatchNode" + GetNumPatches().ToString()).GetComponentInChildren<SkillTreeLeafController>();
+            leaf.SelectedSprite();
+        }
+        if (currentPatchLevel < MaxPatches)
+        {
+            patchBranch.transform.
+                Find("PatchNode" + this.GrowPatchesTree[currentPatchLevel+1].ToString())
+                .GetComponentInChildren<SkillTreeLeafController>().EnableHoverCollider();
+        }
     }
 
     void HealthBranchUpdate()
@@ -45,6 +64,7 @@ public class SkillTreeController : MonoBehaviour
         {
             SkillTreeLeafController leaf = healthBranch.transform.
                 Find("HealthNode" + GetHealthTreeAmount().ToString()).GetComponent<SkillTreeLeafController>();
+
             leaf.SelectedSprite();
 
         }
@@ -103,8 +123,8 @@ public class SkillTreeController : MonoBehaviour
     public void Display(bool display)
     {
         healthBranch.gameObject.SetActive(display);
+        patchBranch.gameObject.SetActive(display);
         myAnimator.SetBool("Visible", display);
-
     }
 
 }

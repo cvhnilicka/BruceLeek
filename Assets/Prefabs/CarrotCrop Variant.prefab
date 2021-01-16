@@ -12,6 +12,31 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 559e63a02896c4e18ac0453cbdc7cbc9, type: 2}
+    - target: {fileID: 3820741051509218717, guid: e79005c98baff49a49f8b5ea68924a8b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.6614277
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820741051509218717, guid: e79005c98baff49a49f8b5ea68924a8b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.8312162
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941997342942401129, guid: e79005c98baff49a49f8b5ea68924a8b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.6614277
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941997342942401129, guid: e79005c98baff49a49f8b5ea68924a8b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941997342942401129, guid: e79005c98baff49a49f8b5ea68924a8b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.8312162
+      objectReference: {fileID: 0}
     - target: {fileID: 7908232622869618405, guid: e79005c98baff49a49f8b5ea68924a8b,
         type: 3}
       propertyPath: m_Sprite
@@ -26,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 8303842220494985189, guid: e79005c98baff49a49f8b5ea68924a8b,
         type: 3}
       propertyPath: m_Name
-      value: CarrotCrop
+      value: CarrotCrop Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8303842220494985191, guid: e79005c98baff49a49f8b5ea68924a8b,
         type: 3}
