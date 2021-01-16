@@ -129,7 +129,7 @@ public class EnemyController : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.Log("Did not detect player");
+            //Debug.Log("Did not detect player");
         }
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("weapon")) && isPlayer)

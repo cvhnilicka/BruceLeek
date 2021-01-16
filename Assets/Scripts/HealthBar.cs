@@ -66,9 +66,9 @@ public class HealthBar : MonoBehaviour
 
     }
 
-    public int TakeDamage(int damageTaken)
+    public int TakeDamage(float damageTaken)
     {
-        currentHealth -= damageTaken;
+        currentHealth -= (int)damageTaken;
         AnimationController();
         RenderCheck();
         return currentHealth;

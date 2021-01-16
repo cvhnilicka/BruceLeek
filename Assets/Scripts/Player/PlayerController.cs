@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         orangeMeter.ResetTotal(orangeAmount);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         healthBar.TakeDamage(amount);
     }
@@ -101,6 +101,14 @@ public class PlayerController : MonoBehaviour
                 UpgradePatchNum();
             }
         }
+        else if (leaf.Contains("WeaponDamageNode"))
+        {
+            if (skillTree.IncreaseWeaponDamageLevel())
+            {
+                // here i would need to increase weapon damage amounts
+                abilities.UpgradeWeaponDamage();
+            }
+        }
     }
 
   
@@ -112,6 +120,10 @@ public class PlayerController : MonoBehaviour
     public MeterController GetOrangeMeter()
     {
         return this.orangeMeter;
+    }
+    public SkillTreeController GetSkillTree()
+    {
+        return this.skillTree;
     }
 
 

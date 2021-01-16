@@ -18,12 +18,6 @@ public class PieTimer : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetTimerPercentage(float perc)
     {
         myAnimator.SetFloat("Percentage", perc);

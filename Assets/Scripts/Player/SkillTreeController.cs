@@ -14,13 +14,14 @@ public class SkillTreeController : MonoBehaviour
     public readonly int MaxPatches = 2;
 
 
-    int[] WeaponDamageTree = new int[] { 1, 10, 20, 30 };
+    float[] WeaponDamageTree = new float[] { 1, 1.1f, 1.25f };
     private int currentWeaponDamageLevel;
-    public readonly int MaxWeaponDamageLevel = 3;
+    public readonly int MaxWeaponDamageLevel = 2;
 
 
     HealthBranch healthBranch;
     PatchBranch patchBranch;
+    WeaponDamageBranch weapondDamageBranch;
     Animator myAnimator;
 
     // Start is called before the first frame update
@@ -34,12 +35,14 @@ public class SkillTreeController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         healthBranch = GetComponentInChildren<HealthBranch>();
         patchBranch = GetComponentInChildren<PatchBranch>();
+        weapondDamageBranch = GetComponentInChildren<WeaponDamageBranch>();
     }
 
     void Update()
     {
         HealthBranchUpdate();
         PatchesBranchUpdate();
+        WeaponDamageBranchUpdate();
     }
 
     void PatchesBranchUpdate()
@@ -72,6 +75,50 @@ public class SkillTreeController : MonoBehaviour
         {
             healthBranch.transform.Find("HealthNode" + this.HealthTree[currentHealthLevel + 1]
                 .ToString()).GetComponent<SkillTreeLeafController>().EnableHoverCollider();
+        }
+    }
+
+    void WeaponDamageBranchUpdate()
+    {
+        for (int i = 0; i <= currentWeaponDamageLevel; i++)
+        {
+            SkillTreeLeafController leaf;
+            switch (i)
+            {
+                case 0:
+                    leaf = weapondDamageBranch.transform.Find("WeaponDamageNode1").GetComponent<SkillTreeLeafController>();
+                    break;
+                case 1:
+                    leaf = weapondDamageBranch.transform.Find("WeaponDamageNode10").GetComponent<SkillTreeLeafController>();
+                    break;
+                case 2: leaf = weapondDamageBranch.transform.Find("WeaponDamageNode25").GetComponent<SkillTreeLeafController>();
+                    break;
+                default: leaf = weapondDamageBranch.transform.Find("WeaponDamageNode1").GetComponent<SkillTreeLeafController>();
+                    break;
+
+
+            }
+
+            leaf.SelectedSprite();
+        }
+        if (currentWeaponDamageLevel < MaxWeaponDamageLevel)
+        {
+            switch (currentWeaponDamageLevel)
+            {
+    
+                case 0:
+                    weapondDamageBranch.transform.Find("WeaponDamageNode10").GetComponent<SkillTreeLeafController>().EnableHoverCollider();
+                    break;
+                case 1:
+                    weapondDamageBranch.transform.Find("WeaponDamageNode25").GetComponent<SkillTreeLeafController>().EnableHoverCollider();
+                    break;
+                default:
+                    break;
+            }
+
+            //weapondDamageBranch.transform
+            //    .Find("WeaponDamageNode" + this.WeaponDamageTree[currentWeaponDamageLevel + 1]
+            //    .ToString()).GetComponent<SkillTreeLeafController>().EnableHoverCollider();
         }
     }
 
@@ -115,7 +162,7 @@ public class SkillTreeController : MonoBehaviour
         return false;
     }
 
-    public int GetWeaponDamage()
+    public float GetWeaponDamage()
     {
         return this.WeaponDamageTree[currentWeaponDamageLevel];
     }
@@ -124,6 +171,7 @@ public class SkillTreeController : MonoBehaviour
     {
         healthBranch.gameObject.SetActive(display);
         patchBranch.gameObject.SetActive(display);
+        weapondDamageBranch.gameObject.SetActive(display);
         myAnimator.SetBool("Visible", display);
     }
 

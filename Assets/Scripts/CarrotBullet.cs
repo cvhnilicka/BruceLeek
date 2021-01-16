@@ -8,8 +8,6 @@ public class CarrotBullet : MonoBehaviour
     public GameObject player;
     float fireVelocity = 5f;
 
-    private int weaponDamage = 1;
-
     Rigidbody2D carrotBody;
 
 
@@ -25,5 +23,5 @@ public class CarrotBullet : MonoBehaviour
 
     }
 
- 
+
 }
