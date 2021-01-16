@@ -14,6 +14,7 @@ public class GameSession : MonoBehaviour
     ImageDigitAnimator[] timerImages;
 
     PlayerController player;
+    UIController uiController;
 
  
 
@@ -29,6 +30,7 @@ public class GameSession : MonoBehaviour
     float gameTimer = 120f;
 
     int waveNum;
+    int score;
 
     bool upgraded = false;
 
@@ -52,6 +54,7 @@ public class GameSession : MonoBehaviour
         waveNum = 1;
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
         GameObject timer = gameObject.transform.Find("TimerV1").gameObject;
+        uiController = GetComponentInChildren<UIController>();
         timerImages = timer.GetComponentsInChildren<ImageDigitAnimator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //Debug.Log("Timer Images Animators Length: " + timerImages.Length);
@@ -59,6 +62,7 @@ public class GameSession : MonoBehaviour
         TimerAnimators(gameTimer);
         waveBackground.SetActive(false);
         upgraded = false;
+        score = 0;
 
     }
 
@@ -68,13 +72,21 @@ public class GameSession : MonoBehaviour
     {
         WaveController();
         TimerAnimators(breakTimer);
+        uiController.UpdateCurrentWave(waveNum);
 
-        //if (waveNum > 1 && !upgraded)
-        //{
-        //    upgraded = true;
-        //}
-        
+
     }
+
+    //public UIController GetUIController()
+    //{
+    //    return this.uiController;
+    //}
+
+    public void UpdateUIScore(int addition)
+    {
+        this.uiController.UpdateScore(this.score += addition);
+    }
+   
 
     private void WaveController()
     {
@@ -88,6 +100,7 @@ public class GameSession : MonoBehaviour
 
             if (currentWave.WaveComplete())
             {
+                this.score += 1000;
                 currentWave = null;
                 breakTimer = breakTime;
             }

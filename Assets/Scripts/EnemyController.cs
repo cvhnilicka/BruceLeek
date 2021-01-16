@@ -137,28 +137,33 @@ public class EnemyController : MonoBehaviour
 
             if (damageTimer >= damageTime)
             {
-                int health = healthBar.TakeDamage(collision.gameObject.GetComponent<IsWeapon>().GetWeaponDamage());
-                if (health <= 0)
-                {
-                    // die
-                    myAnimator.SetTrigger("Death");
-                    Destroy(this.gameObject, deathClip.length);
-                }
+                Hit(collision);
                 damageTimer = 0f;
             }
         }
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("friendlyBullet")))
         {
-            int health = healthBar.LargeHit();
-            if (health <= 0)
-            {
-                // die
-                myAnimator.SetTrigger("Death");
-                Destroy(this.gameObject, deathClip.length);
-            }
+            Hit(collision);
             Destroy(collision.gameObject);
             damageTimer = 0f;
+        }
+    }
+
+    private void Die()
+    {
+        myAnimator.SetTrigger("Death");
+        GameObject.Find("GameSession").GetComponent<GameSession>().UpdateUIScore(250);
+        Destroy(this.gameObject, deathClip.length);
+    }
+
+    private void Hit(Collider2D collision)
+    {
+        int health = healthBar.TakeDamage(collision.gameObject.GetComponent<IsWeapon>().GetWeaponDamage());
+        if (health <= 0)
+        {
+            // die
+            Die();
         }
     }
 

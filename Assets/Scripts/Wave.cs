@@ -29,6 +29,7 @@ public class Wave
     int numEnemies;
     int activeEnemies;
 
+    GameSession session;
 
 
     float enemySpawnTimer;
@@ -39,6 +40,7 @@ public class Wave
         this.waveNum = waveNum;
         this.spawnPoints = spawnPoints;
         this.enemies = enemies;
+        //this.session = session;
         enemySpawnTimer = 0f;
         numEnemies = 0;
         maxEnemies = 2;

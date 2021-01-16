@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (GameObject crop in allCrops)
         {
-            print(skillTree.GetNumPatches());
+            //print(skillTree.GetNumPatches());
             if (crop.name.Contains("Carrot"))
             {
                 allCarrots[cIdx] = crop.GetComponent<CropController>();
@@ -195,8 +195,8 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        print("Total Number of Active leeks: " + activeLeek);
-        print("Total Number of Active carrots: " + activeCarrot);
+        //print("Total Number of Active leeks: " + activeLeek);
+        //print("Total Number of Active carrots: " + activeCarrot);
 
     }
 

@@ -8,13 +8,13 @@ public class PlantableComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myPlantableCollider = GetComponent<BoxCollider2D>();
         DisablePlantable();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
+        // i need this as they are being put inactive
+        myPlantableCollider = GetComponent<BoxCollider2D>();
 
     }
 
