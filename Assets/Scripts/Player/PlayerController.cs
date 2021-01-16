@@ -64,9 +64,9 @@ public class PlayerController : MonoBehaviour
         orangeMeter.ResetTotal(orangeAmount);
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
-        healthBar.LargeHit();
+        healthBar.TakeDamage(amount);
     }
 
     // Update is called once per frame

@@ -137,7 +137,7 @@ public class EnemyController : MonoBehaviour
 
             if (damageTimer >= damageTime)
             {
-                int health = healthBar.LargeHit();
+                int health = healthBar.TakeDamage(collision.gameObject.GetComponent<IsWeapon>().GetWeaponDamage());
                 if (health <= 0)
                 {
                     // die

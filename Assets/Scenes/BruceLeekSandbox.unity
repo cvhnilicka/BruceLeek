@@ -540,6 +540,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06635b76e5fbc4bc0b43abd72a0c0111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1194023559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5572027284329316375, guid: a89d3bfa111d4455798cb0693d41ad57,
+    type: 3}
+  m_PrefabInstance: {fileID: 1592352038785523597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1194023560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194023559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15db212a3276742d588a8eba793972a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1653900870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7543127400005284699, guid: 7c6d85108a69540dd914b5ee01cbea20,
@@ -4490,6 +4508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098500995345296208, guid: c5030546186f243089add4781882f9d7,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098500995345296208, guid: c5030546186f243089add4781882f9d7,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.06
       objectReference: {fileID: 0}
@@ -4497,6 +4520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098500995479064496, guid: c5030546186f243089add4781882f9d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098500995479064496, guid: c5030546186f243089add4781882f9d7,
         type: 3}
@@ -4516,6 +4544,11 @@ PrefabInstance:
     - target: {fileID: 9098500996331938988, guid: c5030546186f243089add4781882f9d7,
         type: 3}
       propertyPath: m_ChildCameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098500997285879749, guid: c5030546186f243089add4781882f9d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098500997285879749, guid: c5030546186f243089add4781882f9d7,

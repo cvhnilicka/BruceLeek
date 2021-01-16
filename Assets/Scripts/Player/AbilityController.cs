@@ -111,7 +111,10 @@ public class AbilityController : MonoBehaviour
         {
             if (parent.GetOrangeMeter().GetCurrentAmount() <= 0) return;
             myAnimator.SetTrigger("CarrotGun");
-            Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
+            GameObject newBullet = Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
+            // Todo: So here i will need to set the carrot weapon damage based on skill tree multiplier and base damage
+
+            //newBullet.GetComponent<IsWeapon>().SetWeaponDamage()
             parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .25f);
         }
     }
@@ -142,18 +145,18 @@ public class AbilityController : MonoBehaviour
      * **/
 
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
-        {
-            if (damageTimer >= damageTime)
-            {
-                parent.TakeDamage(2f);
-                damageTimer = 0;
-            }
-        }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    if (myCollider.IsTouchingLayers(LayerMask.GetMask("enemyBullet")))
+    //    {
+    //        if (damageTimer >= damageTime)
+    //        {
+    //            parent.TakeDamage(2f);
+    //            damageTimer = 0;
+    //        }
+    //    }
 
-    }
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -161,12 +164,15 @@ public class AbilityController : MonoBehaviour
         {
             if (damageTimer >= damageTime)
             {
-                parent.TakeDamage(2f);
+                // here i need to grab the weapon damage from the enemy and damage the player with it
+                parent.TakeDamage(collision.gameObject.GetComponentInChildren<IsWeapon>().GetWeaponDamage());
                 damageTimer = 0;
             }
         }
     }
 
+
+    //private void take
 
 
     private void OnTriggerEnter2D(Collider2D collision)

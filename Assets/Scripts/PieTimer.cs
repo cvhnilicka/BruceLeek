@@ -12,6 +12,12 @@ public class PieTimer : MonoBehaviour
         myAnimator = GetComponent<Animator>();
     }
 
+    private void Awake()
+    {
+        myAnimator = GetComponent<Animator>();
+
+    }
+
     // Update is called once per frame
     void Update()
     {
