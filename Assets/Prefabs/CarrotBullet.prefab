@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6045885304080089438}
   - component: {fileID: 6045885304080089439}
   - component: {fileID: 6045885304080089436}
+  - component: {fileID: 600388286366381168}
   m_Layer: 14
   m_Name: CarrotBullet
   m_TagString: Untagged
@@ -144,3 +145,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1592352039799401913, guid: a89d3bfa111d4455798cb0693d41ad57, type: 3}
+--- !u!114 &600388286366381168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6045885304080089433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15db212a3276742d588a8eba793972a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDamage: 5

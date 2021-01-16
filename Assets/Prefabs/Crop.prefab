@@ -41,7 +41,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 730352232741006614}
   m_Enabled: 0
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: efc17bea150d044f29310ef9410d6c64, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3555960991173064292}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: efc17bea150d044f29310ef9410d6c64, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 1488863260364308915}
   m_Layer: 13
   m_Name: Crop
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

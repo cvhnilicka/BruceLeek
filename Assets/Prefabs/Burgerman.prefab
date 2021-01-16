@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 557550535}
   - component: {fileID: 557550537}
   - component: {fileID: 557550536}
+  - component: {fileID: 442100843966528973}
   m_Layer: 15
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -71,6 +72,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTime: 0.5
+--- !u!114 &442100843966528973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557550534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15db212a3276742d588a8eba793972a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDamage: 3
 --- !u!1 &8777140357600588772
 GameObject:
   m_ObjectHideFlags: 0

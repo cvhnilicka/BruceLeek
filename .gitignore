@@ -72,3 +72,4 @@ crashlytics-build.properties
 
 # Videos
 *.mov
+*.app/

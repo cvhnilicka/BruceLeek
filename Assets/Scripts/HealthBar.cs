@@ -66,6 +66,14 @@ public class HealthBar : MonoBehaviour
 
     }
 
+    public int TakeDamage(int damageTaken)
+    {
+        currentHealth -= damageTaken;
+        AnimationController();
+        RenderCheck();
+        return currentHealth;
+    }
+
     public int SmallHit()
     {
         currentHealth -= smallHitValue;
