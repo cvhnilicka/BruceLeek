@@ -215,22 +215,41 @@ public class AbilityController : MonoBehaviour
         {
             if (damageTimer >= damageTime)
             {
+                //int health
                 //print(collision.gameObject.name);
                 // here i need to grab the weapon damage from the enemy and damage the player with it
                 if (collision.gameObject.tag == "Weapon")
                 {
-                    parent.TakeDamage(collision.gameObject.GetComponent<IsWeapon>().GetWeaponDamage());
+                     int health = parent.TakeDamage(collision.gameObject.GetComponent<IsWeapon>().GetWeaponDamage());
+                    if (health <= 0)
+                    {
+                        Die();
+                    }
 
                 }
                 else if (collision.gameObject.tag == "Enemy")
                 {
-                    parent.TakeDamage(collision.gameObject.GetComponentInChildren<IsWeapon>().GetWeaponDamage());
+                    int health = parent.TakeDamage(collision.gameObject.GetComponentInChildren<IsWeapon>().GetWeaponDamage());
+                    if (health <= 0)
+                    {
+                        Die();
+                    }
 
                 }
+                //if (health )
                 damageTimer = 0;
             }
         }
     }
+
+
+    void Die()
+    {
+        myAnimator.SetTrigger("Death");
+        parent.SetIsAlive(false);
+        myBody.Sleep();
+    }
+
     private void PlanterCollisionHandler(Collider2D collision)
     {
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("plantable")))

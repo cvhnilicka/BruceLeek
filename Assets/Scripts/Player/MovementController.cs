@@ -15,19 +15,25 @@ public class MovementController : MonoBehaviour
     [Header("Components")]
     Rigidbody2D myBody;
     Collider2D myCollider;
+    PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
+        player = GetComponentInParent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Run();
-        Jump();
+        if (player.GetIsAlive())
+        {
+            Run();
+            Jump();
+        }
+        
     }
 
 

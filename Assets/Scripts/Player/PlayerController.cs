@@ -64,15 +64,34 @@ public class PlayerController : MonoBehaviour
         orangeMeter.ResetTotal(orangeAmount);
     }
 
-    public void TakeDamage(float amount)
+    public int TakeDamage(float amount)
     {
-        healthBar.TakeDamage(amount);
+        int health = healthBar.TakeDamage(amount);
+        return health;
+        //if (health <= 0)
+        //{
+        //    Die();
+        //}
+    }
+
+    public bool GetIsAlive()
+    {
+        return this.isAlive;
+    }
+
+    public void SetIsAlive(bool isAlive)
+    {
+        this.isAlive = isAlive;
+    }
+
+    void Die()
+    {
+        GetComponentInChildren<Rigidbody2D>().Sleep();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         SkillTree();
     }
 

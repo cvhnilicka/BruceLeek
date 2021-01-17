@@ -18,6 +18,9 @@ public class EnemyController : MonoBehaviour
     GameObject player;
     MeleeAttack meleeAttack;
 
+    bool attacking = false;
+
+
     private float attackTimer;
     private float TimeBetweenAttacks = 1.5f;
     private bool walk;
@@ -47,7 +50,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LookAtPlayer();
+        if (attackTimer > TimeBetweenAttacks) LookAtPlayer();
         if (walk) Walk();
         WalkAnimation();
         attackTimer += Time.deltaTime;
@@ -57,14 +60,17 @@ public class EnemyController : MonoBehaviour
 
     private void Walk()
     {
-        if (IsFacingRight())
-        {
-            enemyRigidbody.velocity = new Vector2(moveSpeed, enemyRigidbody.velocity.y);
-        }
-        else
-        {
-            enemyRigidbody.velocity = new Vector2(-moveSpeed, enemyRigidbody.velocity.y);
-        }
+
+        enemyRigidbody.velocity = new Vector2(moveSpeed*transform.localScale.x, enemyRigidbody.velocity.y);
+
+        //if (IsFacingRight())
+        //{
+        //    enemyRigidbody.velocity = new Vector2(moveSpeed, enemyRigidbody.velocity.y);
+        //}
+        //else
+        //{
+        //    enemyRigidbody.velocity = new Vector2(-moveSpeed, enemyRigidbody.velocity.y);
+        //}
     }
 
     private void LookAtPlayer()
