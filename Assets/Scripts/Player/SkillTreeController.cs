@@ -169,10 +169,10 @@ public class SkillTreeController : MonoBehaviour
 
     public void Display(bool display)
     {
-        healthBranch.gameObject.SetActive(display);
-        patchBranch.gameObject.SetActive(display);
-        weapondDamageBranch.gameObject.SetActive(display);
-        myAnimator.SetBool("Visible", display);
+        if (healthBranch.gameObject.activeInHierarchy != display) healthBranch.gameObject.SetActive(display);
+        if (patchBranch.gameObject.activeInHierarchy != display) patchBranch.gameObject.SetActive(display);
+        if (weapondDamageBranch.gameObject.activeInHierarchy != display) weapondDamageBranch.gameObject.SetActive(display);
+        if (myAnimator.GetBool("Visible") != display) myAnimator.SetBool("Visible", display);
     }
 
 }

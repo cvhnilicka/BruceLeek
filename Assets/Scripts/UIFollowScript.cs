@@ -14,9 +14,13 @@ public class UIFollowScript : MonoBehaviour
         diff = playerObj.position - transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //}
+    private void LateUpdate()
     {
-        transform.position = playerObj.position-diff;
+        transform.position = playerObj.position - diff;
+
     }
 }

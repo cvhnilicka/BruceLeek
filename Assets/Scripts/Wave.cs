@@ -17,13 +17,14 @@ using UnityEngine;
  * 
  * **/
 
+// Todo: NEED TO FIGURE OUT A MORE DYNAMIC SPAW RATE IN THE FUTURE
+
 public class Wave
 {
     float enemySpawnTime = 3f;
 
     private int waveNum;
     private GameObject[] spawnPoints;
-    private GameObject[] waveEnemies;
     private GameObject[] enemies;
     int maxEnemies;
     int numEnemies;
@@ -43,9 +44,8 @@ public class Wave
         //this.session = session;
         enemySpawnTimer = 0f;
         numEnemies = 0;
-        maxEnemies = 2;
-        this.waveEnemies = new GameObject[5];
-
+        maxEnemies = DetermineNumberOfEnemies(this.waveNum);
+        Debug.Log("Wave Num: " + waveNum + "\n:NumEnemies: " + maxEnemies);
     }
 
 
@@ -92,6 +92,48 @@ public class Wave
                 enemySpawnTimer = 0f;
             }
         }
+    }
+
+
+
+    /*
+     * 
+     * 
+     * Somehow need to figure out how to dynamically determine how many enemies
+     * based off of waveNum
+     * 
+     * 
+     * **/
+
+    private int DetermineNumberOfEnemies(int waveNum)
+    {
+        int ret = 1;
+        if (waveNum > 0 && waveNum <= 2)
+        {
+            ret = 3;
+        }
+        else if (waveNum > 2 && waveNum <= 5)
+        {
+            ret = 5;
+        }
+        else if (waveNum > 5 && waveNum <= 10)
+        {
+            ret = 8;
+        }
+        else if (waveNum > 10 && waveNum <= 15)
+        {
+            ret = 12;
+        }
+        else if (waveNum > 15 && waveNum <= 20)
+        {
+            ret = 15;
+        }
+        else if (waveNum > 25)
+        {
+            ret = 20;
+        }
+
+        return ret;
     }
 
 
