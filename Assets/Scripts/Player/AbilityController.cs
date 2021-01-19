@@ -59,6 +59,12 @@ public class AbilityController : MonoBehaviour
         leekAttack.GetComponent<IsWeapon>().SetWeaponDamage(parent.GetSkillTree().GetWeaponDamage() * leekAttack.GetComponent<IsWeapon>().GetWeaponDamage());
     }
 
+    public void UpgradeToLongLeek()
+    {
+        BoxCollider2D leekCollider = leekAttack.GetComponent<BoxCollider2D>();
+        leekCollider.size = new Vector2(leekCollider.size.x*2, leekCollider.size.y);
+    }
+
 
     private void CropController()
     {
@@ -104,19 +110,42 @@ public class AbilityController : MonoBehaviour
         }
     }
 
+    private void LeekAttackController()
+    {
+        if (parent.GetGreenMeter().GetCurrentAmount() <= 0) return;
+
+
+
+        // Todo: Differentiate between Long and Short leek attack
+        SkillTreeController.LeekType leekType = parent.GetSkillTree().GetCurrentLeekUnlock();
+
+        switch (leekType)
+        {
+            case SkillTreeController.LeekType.SHORT:
+                myAnimator.SetTrigger("LeekAttack");
+
+                break;
+            case SkillTreeController.LeekType.LONG:
+                myAnimator.SetTrigger("LongLeek");
+
+                break;
+            case SkillTreeController.LeekType.KNOCKBACK:
+                // Todo: call knockback
+                break;
+        }
+        leekAttack.AttackActivate();
+        parent.GetGreenMeter().ReduceMeter(leekDurability * .2f);
+    }
+
+
+
     private void Attack()
     {
         // Todo: So here i will need to set the  weapon damage based on skill tree multiplier and base damage
 
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
-            if (parent.GetGreenMeter().GetCurrentAmount() <= 0) return;
-            myAnimator.SetTrigger("LeekAttack");
-            //print("Supposed Weapond Damage: " + (leekAttack.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage()));
-            //leekAttack.GetComponent<IsWeapon>()
-            //    .SetWeaponDamage(leekAttack.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage());
-            leekAttack.AttackActivate();
-            parent.GetGreenMeter().ReduceMeter(leekDurability * .2f);
+            LeekAttackController();
         }
         if (CrossPlatformInputManager.GetButtonDown("Fire2"))
         {
@@ -128,6 +157,8 @@ public class AbilityController : MonoBehaviour
             parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .25f);
         }
     }
+
+
 
     private void GrabCrops()
     {
@@ -148,25 +179,17 @@ public class AbilityController : MonoBehaviour
     }
 
 
+    void Die()
+    {
+        myAnimator.SetTrigger("Death");
+        parent.SetIsAlive(false);
+        myBody.Sleep();
+    }
 
     /*
      * Ability Collision Handlers
      * 
      * **/
-
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        //DamageCollisionHandler(collision);
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //DamageCollisionHandler(collision);
-    }
-
-    
 
 
     //private void take
@@ -227,6 +250,7 @@ public class AbilityController : MonoBehaviour
                     }
 
                 }
+                // Todo: can probably clean and consolidate these
                 else if (collision.gameObject.tag == "Enemy")
                 {
                     int health = parent.TakeDamage(collision.gameObject.GetComponentInChildren<IsWeapon>().GetWeaponDamage());
@@ -243,12 +267,6 @@ public class AbilityController : MonoBehaviour
     }
 
 
-    void Die()
-    {
-        myAnimator.SetTrigger("Death");
-        parent.SetIsAlive(false);
-        myBody.Sleep();
-    }
 
     private void PlanterCollisionHandler(Collider2D collision)
     {

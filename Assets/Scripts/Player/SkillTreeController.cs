@@ -18,10 +18,20 @@ public class SkillTreeController : MonoBehaviour
     private int currentWeaponDamageLevel;
     public readonly int MaxWeaponDamageLevel = 2;
 
+    public enum LeekType { SHORT, LONG, KNOCKBACK };
+    LeekType[] LeekUpgradeTree = new LeekType[] { LeekType.SHORT, LeekType.LONG, LeekType.KNOCKBACK };
+    private LeekType currentLeekType;
+    private int currentLeekUpgrade;
+    public readonly int MaxLeekUpgrades = 2;
+
+
+    bool LongLeekUnlocked = false;
+
 
     HealthBranch healthBranch;
     PatchBranch patchBranch;
     WeaponDamageBranch weapondDamageBranch;
+    LeekUpgradeBranch leekUpgradeBranch;
     Animator myAnimator;
 
     // Start is called before the first frame update
@@ -31,11 +41,13 @@ public class SkillTreeController : MonoBehaviour
         currentHealthLevel = 0;
         currentPatchLevel = 0;
         currentWeaponDamageLevel = 0;
+        currentLeekUpgrade = 0;
 
         myAnimator = GetComponent<Animator>();
         healthBranch = GetComponentInChildren<HealthBranch>();
         patchBranch = GetComponentInChildren<PatchBranch>();
         weapondDamageBranch = GetComponentInChildren<WeaponDamageBranch>();
+        leekUpgradeBranch = GetComponentInChildren<LeekUpgradeBranch>();
     }
 
     void Update()
@@ -43,7 +55,15 @@ public class SkillTreeController : MonoBehaviour
         HealthBranchUpdate();
         PatchesBranchUpdate();
         WeaponDamageBranchUpdate();
+        LeekBranchUpdate();
     }
+
+
+    /*
+     * 
+     * Update Functions for branches
+     * 
+     * **/
 
     void PatchesBranchUpdate()
     {
@@ -60,6 +80,8 @@ public class SkillTreeController : MonoBehaviour
                 .GetComponentInChildren<SkillTreeLeafController>().EnableHoverCollider();
         }
     }
+
+
 
     void HealthBranchUpdate()
     {
@@ -116,10 +138,80 @@ public class SkillTreeController : MonoBehaviour
                     break;
             }
 
-            //weapondDamageBranch.transform
-            //    .Find("WeaponDamageNode" + this.WeaponDamageTree[currentWeaponDamageLevel + 1]
-            //    .ToString()).GetComponent<SkillTreeLeafController>().EnableHoverCollider();
         }
+    }
+
+    void LeekBranchUpdate()
+    {
+        for (int i = 0; i <= currentLeekUpgrade; i++)
+        {
+            SkillTreeLeafController leaf;
+            switch (i)
+            {
+                case 0:
+                    leaf = leekUpgradeBranch.transform.Find("LeekUpgradeShort").GetComponent<SkillTreeLeafController>();
+                    break;
+                case 1:
+                    leaf = leekUpgradeBranch.transform.Find("LeekUpgradeLong").GetComponent<SkillTreeLeafController>();
+                    break;
+                case 2:
+                    leaf = leekUpgradeBranch.transform.Find("LeekUpgradeKnockback").GetComponent<SkillTreeLeafController>();
+                    break;
+                default:
+                    leaf = leekUpgradeBranch.transform.Find("LeekUpgradeShort").GetComponent<SkillTreeLeafController>();
+                    break;
+
+
+            }
+
+            leaf.SelectedSprite();
+
+        }
+        if (currentLeekUpgrade < MaxLeekUpgrades)
+        {
+            switch (currentLeekUpgrade)
+            {
+
+                case 0:
+                    leekUpgradeBranch.transform.Find("LeekUpgradeLong").GetComponent<SkillTreeLeafController>().EnableHoverCollider();
+                    break;
+                case 1:
+                    leekUpgradeBranch.transform.Find("LeekUpgradeKnockback").GetComponent<SkillTreeLeafController>().EnableHoverCollider();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    }
+
+
+
+    /*
+     * 
+     * Get and Set Fields
+     * 
+     * **/
+
+    //public LeekType GetCurrentLeekType()
+    //{
+    //    return this.currentLeekType;
+    //}
+    //public
+
+    public LeekType GetCurrentLeekUnlock()
+    {
+        return this.LeekUpgradeTree[currentLeekUpgrade];
+    }
+
+    public bool IncreaseLeekUpgrades()
+    {
+        if (currentLeekUpgrade < MaxLeekUpgrades)
+        {
+            currentLeekUpgrade += 1;
+            return true;
+        }
+        return false;
     }
 
     public int GetHealthTreeAmount()
@@ -167,12 +259,21 @@ public class SkillTreeController : MonoBehaviour
         return this.WeaponDamageTree[currentWeaponDamageLevel];
     }
 
+
+
+    /*
+     * 
+     * Display
+     * 
+     * **/
     public void Display(bool display)
     {
         if (healthBranch.gameObject.activeInHierarchy != display) healthBranch.gameObject.SetActive(display);
         if (patchBranch.gameObject.activeInHierarchy != display) patchBranch.gameObject.SetActive(display);
         if (weapondDamageBranch.gameObject.activeInHierarchy != display) weapondDamageBranch.gameObject.SetActive(display);
+        if (leekUpgradeBranch.gameObject.activeInHierarchy != display) leekUpgradeBranch.gameObject.SetActive(display);
         if (myAnimator.GetBool("Visible") != display) myAnimator.SetBool("Visible", display);
+
     }
 
 }

@@ -110,7 +110,7 @@ public class Wave
         int ret = 1;
         if (waveNum > 0 && waveNum <= 2)
         {
-            ret = 3;
+            ret = 2;
         }
         else if (waveNum > 2 && waveNum <= 5)
         {

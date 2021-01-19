@@ -128,6 +128,26 @@ public class PlayerController : MonoBehaviour
                 abilities.UpgradeWeaponDamage();
             }
         }
+        else if (leaf.Contains("LeekUpgrade"))
+        {
+            // unlock long leek attack
+            if (skillTree.IncreaseLeekUpgrades())
+            {
+                switch(skillTree.GetCurrentLeekUnlock())
+                {
+                    case SkillTreeController.LeekType.LONG:
+                        // here i need to increase the size of the collider
+                        abilities.UpgradeToLongLeek();
+                        break;
+                    case SkillTreeController.LeekType.KNOCKBACK:
+                        // here would be some of the associated functionality for knockback
+
+                        break;
+
+                }
+            }
+            
+        }
     }
 
   
