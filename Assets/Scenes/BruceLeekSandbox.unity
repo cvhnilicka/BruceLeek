@@ -545,24 +545,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1117748621}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1173838711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1592352039799401913, guid: a89d3bfa111d4455798cb0693d41ad57,
-    type: 3}
-  m_PrefabInstance: {fileID: 1592352038785523597}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1173838714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173838711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06635b76e5fbc4bc0b43abd72a0c0111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1194023559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5572027284329316375, guid: a89d3bfa111d4455798cb0693d41ad57,
@@ -13325,6 +13307,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051701444251642163, guid: a89d3bfa111d4455798cb0693d41ad57,
+        type: 3}
+      propertyPath: carrotBullet
+      value: 
+      objectReference: {fileID: 6045885304080089433, guid: d0d69ec5dbcf14c7e9fddecc0ad7ac8e,
+        type: 3}
+    - target: {fileID: 6051701444251642163, guid: a89d3bfa111d4455798cb0693d41ad57,
+        type: 3}
+      propertyPath: leekEfficiency
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051701444251642163, guid: a89d3bfa111d4455798cb0693d41ad57,
+        type: 3}
+      propertyPath: carrotEfficiency
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a89d3bfa111d4455798cb0693d41ad57, type: 3}

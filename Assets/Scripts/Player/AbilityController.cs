@@ -8,8 +8,8 @@ public class AbilityController : MonoBehaviour
 {
     [SerializeField] float leekDurability = 20f;
     [SerializeField] float carrotAmmo = 20f;
-    [SerializeField] float leekEfficiency = 2f;
-    [SerializeField] float carrotEfficiency = 1f;
+    [SerializeField] float leekEfficiency = .2f;
+    [SerializeField] float carrotEfficiency = .1f;
     public GameObject carrotBullet;
 
 
