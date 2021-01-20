@@ -8,6 +8,8 @@ public class AbilityController : MonoBehaviour
 {
     [SerializeField] float leekDurability = 20f;
     [SerializeField] float carrotAmmo = 20f;
+    [SerializeField] float leekEfficiency = 2f;
+    [SerializeField] float carrotEfficiency = 1f;
     public GameObject carrotBullet;
 
 
@@ -141,7 +143,7 @@ public class AbilityController : MonoBehaviour
                 break;
         }
         leekAttack.AttackActivate();
-        parent.GetGreenMeter().ReduceMeter(leekDurability * .2f);
+        parent.GetGreenMeter().ReduceMeter(leekDurability * leekEfficiency);
     }
 
 
@@ -161,7 +163,7 @@ public class AbilityController : MonoBehaviour
             GameObject newBullet = Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
 
             newBullet.GetComponent<IsWeapon>().SetWeaponDamage(newBullet.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage());
-            parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .1f);
+            parent.GetOrangeMeter().ReduceMeter(carrotAmmo * carrotEfficiency);
         }
     }
 
