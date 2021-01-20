@@ -100,7 +100,7 @@ public class GameSession : MonoBehaviour
 
             if (currentWave.WaveComplete())
             {
-                this.score += 1000;
+                this.uiController.UpdateScore(this.score += 1000);
                 currentWave = null;
                 breakTimer = breakTime;
             }
