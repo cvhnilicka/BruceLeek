@@ -33,6 +33,7 @@ public class SkillTreeController : MonoBehaviour
     WeaponDamageBranch weapondDamageBranch;
     LeekUpgradeBranch leekUpgradeBranch;
     Animator myAnimator;
+    GameObject labels;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,8 @@ public class SkillTreeController : MonoBehaviour
         patchBranch = GetComponentInChildren<PatchBranch>();
         weapondDamageBranch = GetComponentInChildren<WeaponDamageBranch>();
         leekUpgradeBranch = GetComponentInChildren<LeekUpgradeBranch>();
+
+        labels = transform.Find("Labels").gameObject;
     }
 
     void Update()
@@ -272,6 +275,7 @@ public class SkillTreeController : MonoBehaviour
         if (patchBranch.gameObject.activeInHierarchy != display) patchBranch.gameObject.SetActive(display);
         if (weapondDamageBranch.gameObject.activeInHierarchy != display) weapondDamageBranch.gameObject.SetActive(display);
         if (leekUpgradeBranch.gameObject.activeInHierarchy != display) leekUpgradeBranch.gameObject.SetActive(display);
+        if (labels.gameObject.activeInHierarchy != display) labels.gameObject.SetActive(display);
         if (myAnimator.GetBool("Visible") != display) myAnimator.SetBool("Visible", display);
 
     }

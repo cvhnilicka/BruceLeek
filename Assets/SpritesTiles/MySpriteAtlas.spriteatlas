@@ -44,6 +44,7 @@ SpriteAtlas:
     - {fileID: 2800000, guid: f4e1d4b83d2b645bfb2384c5529bb1f0, type: 3}
     - {fileID: 2800000, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
     - {fileID: 2800000, guid: d3e4ed9bf9eee4f7f8899d24fb05b3b5, type: 3}
+    - {fileID: 2800000, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -160,6 +161,10 @@ SpriteAtlas:
   - {fileID: -3875453687682973798, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
   - {fileID: 7593224940395133065, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
   - {fileID: 2008577289524957520, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
+  - {fileID: -6831191104686445864, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
+  - {fileID: -5678604471125806274, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
+  - {fileID: -5430807965518722727, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
+  - {fileID: -7241280995805799893, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
   - {fileID: 807311703185402040, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
   - {fileID: 8032357022465999097, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
   - {fileID: -5814150423046072675, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
@@ -316,6 +321,10 @@ SpriteAtlas:
   - FarmerRedv2LongLeekAttack_0
   - FarmerRedv2LongLeekAttack_3
   - FarmerRedv2LongLeekAttack_2
+  - SkillTreeLabels_2
+  - SkillTreeLabels_3
+  - SkillTreeLabels_0
+  - SkillTreeLabels_1
   - leekUpgradesv0_8
   - leekUpgradesv0_6
   - leekUpgradesv0_7

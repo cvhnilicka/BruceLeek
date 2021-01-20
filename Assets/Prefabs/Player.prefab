@@ -754,15 +754,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1592352039799401912}
     m_Modifications:
+    - target: {fileID: 520466587523675579, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 520466587523675579, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1839376183
+      objectReference: {fileID: 0}
     - target: {fileID: 681765574628633349, guid: 7580be6c0e55a45a09013428c8cf3511,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.27
       objectReference: {fileID: 0}
+    - target: {fileID: 1575104202524350799, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575104202524350799, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1839376183
+      objectReference: {fileID: 0}
     - target: {fileID: 5989526476772021291, guid: 7580be6c0e55a45a09013428c8cf3511,
         type: 3}
       propertyPath: m_Name
       value: SkillTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497315196565385895, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497315196565385895, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1839376183
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167421507488375498, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167421507488375498, guid: 7580be6c0e55a45a09013428c8cf3511,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1839376183
       objectReference: {fileID: 0}
     - target: {fileID: 9141722545707007021, guid: 7580be6c0e55a45a09013428c8cf3511,
         type: 3}
@@ -777,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 9141722545707007021, guid: 7580be6c0e55a45a09013428c8cf3511,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.72
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 9141722545707007021, guid: 7580be6c0e55a45a09013428c8cf3511,
         type: 3}
