@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     // state
     bool isAlive = true;
+    bool hasUpgrade = false;
 
 
 
@@ -42,17 +43,29 @@ public class PlayerController : MonoBehaviour
 
 
     }
-
+    // Update is called once per frame
+    void Update()
+    {
+        SkillTree();
+    }
 
     public void SetInWave(bool inWave)
     {
-        this.inWave = inWave;
+        if (this.inWave != inWave)
+        {
+            this.inWave = inWave;
+        }
     }
 
     public bool GetInWave()
     {
         return this.inWave;
 
+    }
+
+    public void PlayerHasUpgrade()
+    {
+        hasUpgrade = true;
     }
 
     public void UpdateGreenMeter(float greenAmount)
@@ -68,10 +81,7 @@ public class PlayerController : MonoBehaviour
     {
         int health = healthBar.TakeDamage(amount);
         return health;
-        //if (health <= 0)
-        //{
-        //    Die();
-        //}
+
     }
 
     public bool GetIsAlive()
@@ -89,15 +99,12 @@ public class PlayerController : MonoBehaviour
         GetComponentInChildren<Rigidbody2D>().Sleep();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        SkillTree();
-    }
+    
 
     public void SkillTree()
     {
-        skillTree.Display(!inWave);
+            skillTree.Display(!inWave && hasUpgrade);
+    
     }
 
     public void UpgradeSkillTree(string leaf)
@@ -148,7 +155,9 @@ public class PlayerController : MonoBehaviour
             }
             
         }
+        hasUpgrade = false;
     }
+
 
   
     public MeterController GetGreenMeter()

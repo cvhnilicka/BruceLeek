@@ -17,6 +17,7 @@ public class AbilityController : MonoBehaviour
     bool overPlantablePatch;
     float damageTime = 3f;
     float damageTimer;
+    bool shouldAttack;
 
     [Header("Components")]
     Rigidbody2D myBody;
@@ -32,6 +33,7 @@ public class AbilityController : MonoBehaviour
         overPlantablePatch = false;
         grabCrops = false;
         plant = false;
+        shouldAttack = true;
         damageTimer = 0f;
         parent = GetComponentInParent<PlayerController>();
         myAnimator = GetComponent<Animator>();
@@ -49,9 +51,14 @@ public class AbilityController : MonoBehaviour
         FlipSprite();
         WalkAnimation();
 
-        Attack();
+        if (parent.GetInWave()) Attack();
         CropController();
         damageTimer += Time.deltaTime;
+    }
+
+    public void SetShouldAttack(bool shouldAttack)
+    {
+        this.shouldAttack = shouldAttack;
     }
 
     public void UpgradeWeaponDamage()

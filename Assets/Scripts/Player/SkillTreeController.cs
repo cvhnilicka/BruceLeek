@@ -22,7 +22,7 @@ public class SkillTreeController : MonoBehaviour
     LeekType[] LeekUpgradeTree = new LeekType[] { LeekType.SHORT, LeekType.LONG, LeekType.KNOCKBACK };
     private LeekType currentLeekType;
     private int currentLeekUpgrade;
-    public readonly int MaxLeekUpgrades = 2;
+    public readonly int MaxLeekUpgrades = 1;
 
 
     bool LongLeekUnlocked = false;
