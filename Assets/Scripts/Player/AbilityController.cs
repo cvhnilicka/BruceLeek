@@ -161,7 +161,7 @@ public class AbilityController : MonoBehaviour
             GameObject newBullet = Instantiate(carrotBullet, transform.localPosition, transform.localRotation);
 
             newBullet.GetComponent<IsWeapon>().SetWeaponDamage(newBullet.GetComponent<IsWeapon>().GetWeaponDamage() * parent.GetSkillTree().GetWeaponDamage());
-            parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .25f);
+            parent.GetOrangeMeter().ReduceMeter(carrotAmmo * .1f);
         }
     }
 
