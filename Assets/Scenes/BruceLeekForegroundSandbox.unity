@@ -830,6 +830,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MountainForeground
       objectReference: {fileID: 0}
+    - target: {fileID: 8747325371195784312, guid: a59109736c3494a5ab39cf89aee54560,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747325371195784314, guid: a59109736c3494a5ab39cf89aee54560,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747325371195784314, guid: a59109736c3494a5ab39cf89aee54560,
+        type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747325371195784314, guid: a59109736c3494a5ab39cf89aee54560,
+        type: 3}
+      propertyPath: m_CompositePaths.m_Paths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8747325371195784314, guid: a59109736c3494a5ab39cf89aee54560,
         type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.size

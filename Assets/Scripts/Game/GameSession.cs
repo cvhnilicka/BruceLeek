@@ -108,7 +108,12 @@ public class GameSession : MonoBehaviour
         }
         else if (breakTimer > 0f && currentWave == null)
         {
-            if (waveBackground.activeInHierarchy) waveBackground.SetActive(false);
+            if (waveBackground.activeInHierarchy)
+            {
+                waveBackground.SetActive(false);
+                player.PlayerHasUpgrade();
+
+            }
             player.SetInWave(false);
             breakTimer -= Time.deltaTime;
         }
