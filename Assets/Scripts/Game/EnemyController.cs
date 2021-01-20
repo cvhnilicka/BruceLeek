@@ -111,11 +111,16 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        AttackPlayer();
+    }
+
+    private void AttackPlayer()
+    {
         if (attackCollider.IsTouchingLayers(LayerMask.GetMask("player")))
         {
-            
+
             if (attackTimer >= TimeBetweenAttacks)
-             {
+            {
                 myAnimator.SetTrigger("Attack");
                 meleeAttack.AttackActivate();
                 attackTimer = 0f;
@@ -137,6 +142,7 @@ public class EnemyController : MonoBehaviour
         {
             //Debug.Log("Did not detect player");
         }
+        AttackPlayer();
 
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("weapon")) && isPlayer)
         {
