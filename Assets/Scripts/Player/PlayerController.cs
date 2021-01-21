@@ -94,10 +94,7 @@ public class PlayerController : MonoBehaviour
         this.isAlive = isAlive;
     }
 
-    void Die()
-    {
-        GetComponentInChildren<Rigidbody2D>().Sleep();
-    }
+    
 
     
 

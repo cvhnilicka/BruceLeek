@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     HealthBar healthBar;
     GameObject player;
     MeleeAttack meleeAttack;
+    PlayerController pC;
 
     bool attacking = false;
 
@@ -43,18 +44,30 @@ public class EnemyController : MonoBehaviour
         walk = true;
         damageTimer = 99f;
         player = GameObject.FindGameObjectWithTag("Player")
-            .GetComponentInChildren<MovementController>().gameObject; ;
+            .GetComponentInChildren<MovementController>().gameObject;
+
+        pC = GameObject.FindGameObjectWithTag("Player")
+            .GetComponent<PlayerController>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (attackTimer > TimeBetweenAttacks) LookAtPlayer();
-        if (walk) Walk();
-        WalkAnimation();
-        attackTimer += Time.deltaTime;
-        damageTimer += Time.deltaTime;
+        // the player is alive aspect isnt great but it works for now
+        if (pC.GetIsAlive())
+        {
+            if (attackTimer > TimeBetweenAttacks) LookAtPlayer();
+            if (walk) Walk();
+            WalkAnimation();
+            attackTimer += Time.deltaTime;
+            damageTimer += Time.deltaTime;
+        }
+        else
+        {
+            attackCollider.enabled = false;
+        }
+        
 
     }
 

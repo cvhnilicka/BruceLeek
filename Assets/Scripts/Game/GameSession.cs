@@ -15,6 +15,7 @@ public class GameSession : MonoBehaviour
 
     PlayerController player;
     UIController uiController;
+    GameOverController gameOverController;
 
  
 
@@ -55,6 +56,8 @@ public class GameSession : MonoBehaviour
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
         GameObject timer = gameObject.transform.Find("TimerV1").gameObject;
         uiController = GetComponentInChildren<UIController>();
+        gameOverController = GetComponentInChildren<GameOverController>();
+        gameOverController.gameObject.SetActive(false);
         timerImages = timer.GetComponentsInChildren<ImageDigitAnimator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //Debug.Log("Timer Images Animators Length: " + timerImages.Length);
@@ -70,9 +73,20 @@ public class GameSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        WaveController();
-        TimerAnimators(breakTimer);
-        uiController.UpdateCurrentWave(waveNum);
+        if (player.GetIsAlive())
+        {
+            WaveController();
+            TimerAnimators(breakTimer);
+            uiController.UpdateCurrentWave(waveNum);
+        }
+        else
+        {
+            Debug.Log("Player is dead");
+            gameOverController.gameObject.SetActive(true);
+            gameOverController.SetEndScore(this.score);
+            // need to do the game over stuff here
+        }
+       
 
 
     }
