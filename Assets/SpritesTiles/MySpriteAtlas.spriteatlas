@@ -45,6 +45,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
     - {fileID: 2800000, guid: d3e4ed9bf9eee4f7f8899d24fb05b3b5, type: 3}
     - {fileID: 2800000, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
+    - {fileID: 2800000, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
+    - {fileID: 21300000, guid: e7be61dae5b064953ae6d0b4d274eb51, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -157,6 +159,9 @@ SpriteAtlas:
   - {fileID: 2647048339728374106, guid: f4e1d4b83d2b645bfb2384c5529bb1f0, type: 3}
   - {fileID: -8668027587691905157, guid: f4e1d4b83d2b645bfb2384c5529bb1f0, type: 3}
   - {fileID: -518128357735874472, guid: f4e1d4b83d2b645bfb2384c5529bb1f0, type: 3}
+  - {fileID: -480254276019886394, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
+  - {fileID: 3713549098536957005, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
+  - {fileID: -8191739510646017925, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
   - {fileID: -4105865117986445355, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
   - {fileID: -3875453687682973798, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
   - {fileID: 7593224940395133065, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
@@ -174,6 +179,7 @@ SpriteAtlas:
   - {fileID: -2640540064063330366, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
   - {fileID: -5759211050982801846, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
   - {fileID: 1515482525871606890, guid: 21741d5a5f4be4bfaa8b66337b300e49, type: 3}
+  - {fileID: 21300000, guid: e7be61dae5b064953ae6d0b4d274eb51, type: 3}
   - {fileID: 7594005152849201601, guid: 3ea8739bb69654712ba416d7df96fd29, type: 3}
   - {fileID: 4711325262622656955, guid: 3ea8739bb69654712ba416d7df96fd29, type: 3}
   - {fileID: 4154491770832197972, guid: 3ea8739bb69654712ba416d7df96fd29, type: 3}
@@ -317,6 +323,9 @@ SpriteAtlas:
   - HealthSkillTreeNumbers_8
   - HealthSkillTreeNumbers_10
   - HealthSkillTreeNumbers_11
+  - buttons_2
+  - buttons_1
+  - buttons_0
   - FarmerRedv2LongLeekAttack_1
   - FarmerRedv2LongLeekAttack_0
   - FarmerRedv2LongLeekAttack_3
@@ -334,6 +343,7 @@ SpriteAtlas:
   - leekUpgradesv0_3
   - leekUpgradesv0_0
   - leekUpgradesv0_1
+  - FarmerRedIconPlaceholder
   - GrowPatchNumbers_8
   - GrowPatchNumbers_3
   - GrowPatchNumbers_2

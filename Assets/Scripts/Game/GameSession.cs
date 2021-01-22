@@ -36,18 +36,18 @@ public class GameSession : MonoBehaviour
     bool upgraded = false;
 
 
-    private void Awake()
-    {
-        int numGameSessions = FindObjectsOfType<GameSession>().Length;
-        if (numGameSessions > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+    //private void Awake()
+    //{
+    //    int numGameSessions = FindObjectsOfType<GameSession>().Length;
+    //    if (numGameSessions > 1)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //    else
+    //    {
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //}
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +84,7 @@ public class GameSession : MonoBehaviour
             Debug.Log("Player is dead");
             gameOverController.gameObject.SetActive(true);
             gameOverController.SetEndScore(this.score);
+            uiController.gameObject.SetActive(false);
             // need to do the game over stuff here
         }
        
