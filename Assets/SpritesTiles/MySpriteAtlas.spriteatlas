@@ -47,6 +47,9 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 31782a4a68cc6474b8cad28658529a01, type: 3}
     - {fileID: 2800000, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
     - {fileID: 21300000, guid: e7be61dae5b064953ae6d0b4d274eb51, type: 3}
+    - {fileID: 2800000, guid: bc4c4869ba444413fa22ab137adb27ca, type: 3}
+    - {fileID: 21300000, guid: 17b2a1b10752945dea6f4566c58c1f83, type: 3}
+    - {fileID: 2800000, guid: 476199bbf4f8c49769d0c8a02805e6fb, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -57,6 +60,7 @@ SpriteAtlas:
   - {fileID: 1119915357583071347, guid: 52733290e8c4847b68bc410c2fd7ce96, type: 3}
   - {fileID: -6885948953306730200, guid: 52733290e8c4847b68bc410c2fd7ce96, type: 3}
   - {fileID: 8371616443997129779, guid: 52733290e8c4847b68bc410c2fd7ce96, type: 3}
+  - {fileID: 21300000, guid: 17b2a1b10752945dea6f4566c58c1f83, type: 3}
   - {fileID: 5362661425817620022, guid: f89b87c3aef0f4ca18fd8d5f699db510, type: 3}
   - {fileID: 8764749451903497181, guid: f89b87c3aef0f4ca18fd8d5f699db510, type: 3}
   - {fileID: -8703891506454743893, guid: f89b87c3aef0f4ca18fd8d5f699db510, type: 3}
@@ -162,6 +166,7 @@ SpriteAtlas:
   - {fileID: -480254276019886394, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
   - {fileID: 3713549098536957005, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
   - {fileID: -8191739510646017925, guid: ecf1bcb8808304d6e8a1e2f2c25156d2, type: 3}
+  - {fileID: 21300000, guid: bc4c4869ba444413fa22ab137adb27ca, type: 3}
   - {fileID: -4105865117986445355, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
   - {fileID: -3875453687682973798, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
   - {fileID: 7593224940395133065, guid: bc9fdf897c91b45ae8c12f1caa34562c, type: 3}
@@ -199,6 +204,7 @@ SpriteAtlas:
   - {fileID: -8852995704630408839, guid: d3e4ed9bf9eee4f7f8899d24fb05b3b5, type: 3}
   - {fileID: -7415057624537481545, guid: d3e4ed9bf9eee4f7f8899d24fb05b3b5, type: 3}
   - {fileID: 8580201588215871132, guid: d3e4ed9bf9eee4f7f8899d24fb05b3b5, type: 3}
+  - {fileID: 21300000, guid: 476199bbf4f8c49769d0c8a02805e6fb, type: 3}
   - {fileID: -8763827664498362482, guid: ae0d7c2d6c44c4e6698f6308f0a2d462, type: 3}
   - {fileID: -8208314689883150328, guid: ae0d7c2d6c44c4e6698f6308f0a2d462, type: 3}
   - {fileID: 8294413347125015277, guid: ae0d7c2d6c44c4e6698f6308f0a2d462, type: 3}
@@ -221,6 +227,7 @@ SpriteAtlas:
   - FarmerRedv2Die_6
   - FarmerRedv2Die_4
   - FarmerRedv2Die_5
+  - Instructions
   - grassnew_2
   - grassnew_3
   - grassnew_0
@@ -326,6 +333,7 @@ SpriteAtlas:
   - buttons_2
   - buttons_1
   - buttons_0
+  - buttontitle
   - FarmerRedv2LongLeekAttack_1
   - FarmerRedv2LongLeekAttack_0
   - FarmerRedv2LongLeekAttack_3
@@ -363,6 +371,7 @@ SpriteAtlas:
   - healthbar_0
   - healthbar_3
   - healthbar_2
+  - buttoninstructions
   - BlinkerSigns_1
   - BlinkerSigns_0
   - BlinkerSigns_3
